@@ -3,7 +3,6 @@ title: "Publications"
 layout: gridlay
 sitemap: false
 permalink: /publications/
-years: [2016, 2017, 2018, 2019, 2020, 2021]
 ---
 
 <style>
@@ -26,14 +25,48 @@ years: [2016, 2017, 2018, 2019, 2020, 2021]
 </div>
 
 <div class="jumbotron">
-### Refereed journal articles
-{% bibliography --query @article %}
+### Patents
+{% bibliography --query @patent %}
 </div>
 
 <div class="jumbotron">
-### Refereed conference proceedings
-{% bibliography --query @inproceedings %}
+### Invited Talks
+{% bibliography --query @booklet%}
 </div>
+<div class="jumbotron">
+
+### Journal Articles
+{% bibliography --query @article[keywords != local]%}
+</div>
+
+<div class="jumbotron">
+### Refereed Book Chapters
+{% bibliography --query @incollection %}
+</div>
+
+<div class="jumbotron">
+### International Conferences
+{% bibliography --query @inproceedings[keywords != local & keywords != workshop] %}
+</div>
+
+<div class="jumbotron">
+### International Workshops
+{% bibliography --query @inproceedings[keywords ^= workshop] %}
+</div>
+
+<div class="jumbotron">
+### Local Journals
+{% bibliography --query @article[keywords ^= local]%}
+</div>
+<div class="jumbotron">
+### Local Conferences
+{% bibliography --query @inproceedings[keywords ^= local] %}
+</div>
+
+<!-- <div class="jumbotron"> -->
+<!-- ### Other Publications -->
+<!-- {% bibliography --query @misc %} -->
+<!-- </div> -->
 
 <div class="jumbotron">
 ### Software

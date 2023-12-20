@@ -31,6 +31,7 @@ contact: >
 # Pages shown in navbar
 nav_pages:
   - name: about
+  - name: patents
   - name: publications
   - name: research
   - name: talks

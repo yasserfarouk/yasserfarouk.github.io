@@ -34,8 +34,28 @@ iframe {
 
 <div class="jumbotron">
 <div class="col-md-12 col-sm-12">
-<h4>Example Research</h4>
+<h4>Mulltiagent Systems</h4>
+I focus on automated negotiation
+</div>
+</div>
 
-Example description
+<div class="jumbotron">
+<div class="col-md-12 col-sm-12">
+<h4>Robotics/HRI</h4>
+
+</div>
+</div>
+
+<div class="jumbotron">
+<div class="col-md-12 col-sm-12">
+<h4>Time Series Anallysis</h4>
+
+</div>
+</div>
+
+<div class="jumbotron">
+<div class="col-md-12 col-sm-12">
+<h4>Machine Learning</h4>
+
 </div>
 </div>

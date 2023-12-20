@@ -1,0 +1,778 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Computer Security 4th Year</title>
+<style type="text/css">
+.ms-grid8-main {
+	border-left-style: none;
+	border-right: .75pt solid navy;
+	border-top: .75pt solid navy;
+	border-bottom: .75pt solid navy;
+	background-color: white;
+}
+.ms-grid8-tl {
+	font-weight: bold;
+	color: white;
+	border-left: .75pt solid navy;
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom: .75pt solid navy;
+	background-color: navy;
+}
+.ms-grid8-left {
+	font-weight: normal;
+	color: black;
+	border-left: .75pt solid navy;
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom: .75pt solid navy;
+	background-color: white;
+}
+.ms-grid8-top {
+	font-weight: bold;
+	color: white;
+	border-left: .75pt solid navy;
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom: .75pt solid navy;
+	background-color: navy;
+}
+.ms-grid8-even {
+	font-weight: normal;
+	color: black;
+	border-left: .75pt solid navy;
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom: .75pt solid navy;
+	background-color: white;
+}
+.style2 {
+	text-align: center;
+}
+.style3 {
+	text-align: left;
+	font-size: medium;
+}
+.style8 {
+	font-size: xx-large;
+}
+.style9 {
+	color: #0000FF;
+}
+.style10 {
+	font-size: medium;
+}
+.style11 {
+	font-size: x-large;
+}
+.style12 {
+	font-weight: normal;
+	color: black;
+	border-left: .75pt solid navy;
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom: .75pt solid navy;
+	background-color: white;
+	text-align: right;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="style2">Engineering Analysis (Numerical Methods)
+<a href="../../Teaching/questionnaire.php">Questionnaire</a></h1>
+<p class="style2">Department of Electrical Engineering</p>
+<p class="style2">Faculty of Engineering</p>
+<p class="style2">Assiut University</p>
+<p class="style3"><em>Temporary website</em></p>
+<div style="position: absolute; width: 286px; height: 328px; z-index: 1; left: 679px; top: 201px; visibility: visible;" id="layer1" class="style8" title="News">
+
+		<strong><span class="style9">News
+	
+	</span></strong><br />
+	<ul>
+	<li class="style10">
+	2/12 Presentation for Interpolation was corrected</li>
+	<li class="style10">
+	20/11 <a href="../../Teaching/questionnaire.php">Questionnaire</a> is now 
+	open</li>
+	<li class="style10">
+	20/11 Lecture Slides updated</li>
+	<li class="style10">
+	20/11 Time of Second Midterm exam is set</li>
+	<li class="style10">
+	20/11 Site is back online</li>
+	<li class="style10">6/10 Mid Term exam 1 was scheduled (see calendar)</li>
+	<li class="style10">6/10 The grading scheme had been modified</li>
+	<li class="style10">6/10 Lecture schedule was modified</li>
+	<li class="style10">30/9
+	Wednesday lectures will be moved to saturdays 2:4PM starting the week after 
+	next</li>
+	<li><span class="style10">27/9 lecture schedule updated</span></li>
+	<li><span class="style10">23/9 Web site created</span></li>
+	</ul>
+</div>
+<h2>Instructor: </h2>
+<p><a href="mailto:yasserfarouk@gmail.com?subject=CS:">Yasser F. O. Mohammad</a></p>
+<h2>TA:</h2>
+<p>Eng. George and Eng. Mostafa</p>
+<h2>Google Group</h2>
+<p>Email: <a href="mailto:numerical2010@googlegroups.com">
+numerical2010@googlegroups.com</a></p>
+<p>Web:
+<a href="http://groups.google.com/group/numerical2010">
+http://groups.google.com/group/numerical2010</a></p>
+<h2>Office Hours</h2>
+<p>Thursday: 1:3</p>
+<p>Sunday: 11:2</p>
+<p>Office location: Electrical Engineering Department. First Floor, Ask about 
+Dr. Yasser&#39;s office.</p>
+<strong><span class="style11">Main Text
+<br />
+</span>MAT:</strong> Numerical Methods Using Matlab <br />
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+John H. Mathews and Kurtis D. Fink
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; More on the mathematics
+<br />
+</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span class="style11">
+<br />
+Other References
+<br />
+</span>KIU: </strong>Numerical Methods in Engineers with Matlab <br />
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Jaan Kiusalaas <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+More on Matlab <br />
+</em><strong>DUK:</strong><em>
+</em>Numerical Methods<br />
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Rao V. Dukkipati<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; More compact presentation (some typos 
+exist though!!)<br />
+</em><strong>CHA: </strong>Mathematical Methods for Engineers<br />
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Steven Chapra and Raymond Canale<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; More Details <br />
+</em><strong>YAN: </strong>Applied Numerical Methods using Matlab <br />
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Won Y. Yang and others
+
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; More advanced but VERY VERY USEFUL<br />
+</em>Numerical Recipes 
+<br />
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; William Press and Others
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Best numerical methods book ever!!
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Everything in C++ </em>
+
+<h2>Grading:</h2>
+<table style="width: 100%" class="ms-grid8-main">
+	<!-- fpstyle: 23,011111100 -->
+	<tr>
+		<td style="width: 240px" class="ms-grid8-tl">Item</td>
+		<td class="ms-grid8-top">Degrees</td>
+	</tr>
+	<tr>
+		<td style="width: 240px" class="ms-grid8-left">Final Exam</td>
+		<td class="ms-grid8-even">100</td>
+	</tr>
+	<tr>
+		<td style="width: 240px" class="ms-grid8-left">Mid-term exam 1</td>
+		<td class="ms-grid8-even">15</td>
+	</tr>
+	<tr>
+		<td style="width: 240px" class="ms-grid8-left">Mid Term Exam 2</td>
+		<td class="ms-grid8-even">25</td>
+	</tr>
+	<tr>
+		<td style="width: 240px" class="ms-grid8-left">Project</td>
+		<td class="ms-grid8-even">Bonus</td>
+	</tr>
+	<tr>
+		<td style="width: 240px" class="ms-grid8-left">TA Class Activities</td>
+		<td class="ms-grid8-even">10</td>
+	</tr>
+	</table>
+<h2>Calendar</h2>
+<p>Mid term exam&nbsp;1&nbsp;&nbsp; October 29th 2010</p>
+<p><strong>Mid term exam&nbsp;2&nbsp;&nbsp; December 10th 2010</strong></p>
+<h2>Assignments</h2>
+<table style="width: 100%" class="ms-grid8-main">
+	<!-- fpstyle: 23,011111100 -->
+	<tr>
+		<td style="width: 40px" class="ms-grid8-tl">ID</td>
+		<td style="width: 241px" class="ms-grid8-top">Subject</td>
+		<td style="width: 163px" class="ms-grid8-top">Deadline</td>
+		<td class="ms-grid8-top" style="width: 289px">Remarks</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">1</td>
+		<td style="width: 241px" class="ms-grid8-even">
+		<a href="Assignments/1.Matlab.pdf">Matlab</a></td>
+		<td style="width: 163px" class="ms-grid8-even">2/10/2010</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">2</td>
+		<td style="width: 241px" class="ms-grid8-even">
+		<a href="Assignments/2.ErrorAnalysis.pdf">Error Analysis and Binary 
+		System</a></td>
+		<td style="width: 163px" class="ms-grid8-even">9/10/2010</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">3</td>
+		<td style="width: 241px" class="ms-grid8-even">
+		<a href="Assignments/3.Bracketing.pdf">Bracketing Methods and Fixed 
+		Point</a></td>
+		<td style="width: 163px" class="ms-grid8-even">16/10/2010</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">4</td>
+		<td style="width: 241px" class="ms-grid8-even">
+		<a href="Assignments/4.LocallyConvergent.pdf">Locally Convergent 
+		Methods</a></td>
+		<td style="width: 163px" class="ms-grid8-even">23/10/2010</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">5</td>
+		<td style="width: 241px" class="ms-grid8-even">Initial Approximation</td>
+		<td style="width: 163px" class="ms-grid8-even">30/10/2010</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">6</td>
+		<td style="width: 241px" class="ms-grid8-even">Introduction to Matrices</td>
+		<td style="width: 163px" class="ms-grid8-even">6/11/2010</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">7</td>
+		<td style="width: 241px" class="ms-grid8-even">Upper Triangulation</td>
+		<td style="width: 163px" class="ms-grid8-even">13/11/2010</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">8</td>
+		<td style="width: 241px" class="ms-grid8-even">Gaussian Elimination</td>
+		<td style="width: 163px" class="ms-grid8-even">20/11/2010</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">9</td>
+		<td style="width: 241px" class="ms-grid8-even">Triangular Facorization</td>
+		<td style="width: 163px" class="ms-grid8-even">20/11/2010</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">10</td>
+		<td style="width: 241px" class="ms-grid8-even">Iterative Methods</td>
+		<td style="width: 163px" class="ms-grid8-even">27/11/2010</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">11</td>
+		<td style="width: 241px" class="ms-grid8-even">
+		<a href="Assignments/11.LeastSquares.pdf">Least Squares and Least Norm</a></td>
+		<td style="width: 163px" class="ms-grid8-even">&nbsp;</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width: 40px" class="ms-grid8-left">12</td>
+		<td style="width: 241px" class="ms-grid8-even">&nbsp;</td>
+		<td style="width: 163px" class="ms-grid8-even">&nbsp;</td>
+		<td class="ms-grid8-even" style="width: 289px">&nbsp;</td>
+	</tr>
+</table>
+<h2>Lectures</h2>
+<table border="0" cellpadding="0" cellspacing="0" width="716" style="width: 537pt" class="ms-grid8-main">
+	<!-- fpstyle: 23,011111100 -->
+	<colgroup>
+		<col width="64" span="1" style="width:48pt" />
+	</colgroup>
+	<tr height="40">
+		<td height="40" width="64" style="height: 30.0pt; width: 48pt" class="ms-grid8-tl">
+		<table border="0" cellpadding="0" cellspacing="0" width="904" style="width: 679pt" class="ms-grid8-main">
+			<!-- fpstyle: 23,011111100 -->
+			<colgroup>
+				<col width="64" /><col width="80" /><col width="152" />
+				<col width="258" /><col width="110" /><col width="127" />
+				<col width="113" />
+			</colgroup>
+			<tr height="40">
+				<td height="40" width="64" style="height: 30.0pt; width: 48pt" class="ms-grid8-tl">
+				ID</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-top">Day</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-top">
+				Planned Date</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-top">
+				Subject</td>
+				<td width="110" style="width: 83pt" class="ms-grid8-top">Source</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-top">
+				Delivery Date</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-top">Remarks</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				1</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Wed</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				22/9/2010</td>
+				<td width="258" style="width: 194pt; text-underline-style: single;" class="ms-grid8-even">
+				<a href="Slides/1.Overview.ppt">Number Representation in 
+				Computers</a></td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				1.2</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				22/9/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				2</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				23/9/2010</td>
+				<td width="258" style="width: 194pt; text-underline-style: single;" class="ms-grid8-even">
+				<a href="Slides/2.ErrorAnalysisMatlab.ppt">Error Analysis</a></td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				1.3</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				23/9/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				3</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Wed</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				29/9/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Bisection Method</td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				2.2</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				29/9/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				4</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				30/9/2010</td>
+				<td class="ms-grid8-even">False Position &amp; Fixed Iteration 
+				Methods</td>
+				<td width="110" style="width: 83pt" class="style12">2.1,2.2</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				30/9/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" class="ms-grid8-left"></td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Wed</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				6/10/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">----</td>
+				<td width="110" style="width: 83pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">
+				Vacation</td>
+			</tr>
+			<tr height="20">
+				<td height="20" class="ms-grid8-left"></td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				7/10/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">NO 
+				LECTURE</td>
+				<td width="110" style="width: 83pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">No 
+				Lecture</td>
+			</tr>
+			<tr height="20">
+				<td height="20" class="ms-grid8-left"></td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td align="right" width="152" style="width: 114pt" class="ms-grid8-even">
+				9/10/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">NO 
+				LECTURE</td>
+				<td width="110" style="width: 83pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">No 
+				Lecture</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				5</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				14/10/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				<a href="Slides/5.LocalConvergenceMethods.zip">Locally 
+				convergent methods</a></td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				2.4, 2.5</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				14/10/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				6</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				16/10/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				<a href="Slides/6.Approximation.ppt">Initial Approximation</a> +Review</td>
+				<td align="right" class="ms-grid8-even">2.3</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				16/10/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" class="ms-grid8-left"></td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				21/10/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				<a href="Slides/2.ErrorAnalysisMatlab.ppt">Introduction to 
+				Matlab</a></td>
+				<td width="110" style="width: 83pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				31/10/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" class="ms-grid8-left"></td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				23/10/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">NO 
+				LECTURE</td>
+				<td width="110" style="width: 83pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">No 
+				Lecture</td>
+			</tr>
+			<tr height="40">
+				<td height="40" width="64" style="height: 30.0pt; width: 48pt" class="ms-grid8-left">
+				7</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				28/10/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				<a href="Slides/7.Matrices.zip">Introduction to Matrices &amp; Upper Triangular</a></td>
+				<td width="110" style="width: 83pt" class="style12">3.1,3.2, 3.3</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				28/10/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">
+				MidTerm Exam</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				8</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				30/10/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				<a href="Slides/8.Gauss.ppt">Gaussian Elimination</a></td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				3.4</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				30/10/2010<br />
+				4/11/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="40">
+				<td height="40" width="64" style="height: 30.0pt; width: 48pt" class="ms-grid8-left">
+				9</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				4/11/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Triangular Factorization &amp; Iterative Methods</td>
+				<td width="110" style="width: 83pt" class="style12">3.5, 3.6</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				06/11/2010, 11/11/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				10</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				6/11/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				<a href="Slides/10.LinearSystemsSummary.ppt">Least 
+				Squares and Least Norm+SVD</a></td>
+				<td width="110" style="width: 83pt" class="ms-grid8-even">
+				lecture notes</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				20/11/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">
+				<a href="Slides/10.MatlabCommands.txt">Matlab</a>
+				<a href="Slides/testLS.m">testLS</a></td>
+			</tr>
+			<tr height="40">
+				<td height="40" width="64" style="height: 30.0pt; width: 48pt" class="ms-grid8-left">
+				11</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				11/11/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				<a href="Slides/11.Interpolation.zip">Taylor Series &amp; Introduction to Interpolation</a></td>
+				<td width="110" style="width: 83pt" class="style12">4.2, 4.2</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				26/11/2010, 28/11/2010</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="40">
+				<td height="40" width="64" style="height: 30.0pt; width: 48pt" class="ms-grid8-left">
+				12</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				13/11/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				<a href="Slides/12.Lagrange.zip">Lagrange Approximation </a>and Newton Polynomials</td>
+				<td width="110" style="width: 83pt" class="style12">4.3,4.4</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">
+				2/12/2010,<br />
+				</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				13</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				18/11/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">Least 
+				Squares Line</td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				5.1</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				14</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				20/11/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Methods of Curve Fitting</td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				5.2</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">
+				&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				15</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				25/11/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Interpolation by Spline Functions</td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				5.3</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				16</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				27/11/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Numerical Differentiation</td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				6</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="40">
+				<td height="40" width="64" style="height: 30.0pt; width: 48pt" class="ms-grid8-left">
+				17</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				2/12/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Quadrature &amp; Trapexoidal &amp; Simpson Rules</td>
+				<td width="110" style="width: 83pt" class="style12">7.1, 7.2</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="40">
+				<td height="40" width="64" style="height: 30.0pt; width: 48pt" class="ms-grid8-left">
+				18</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				4/12/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Recursive Rules and Romberg Integration</td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				7.3</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="40">
+				<td height="40" width="64" style="height: 30.0pt; width: 48pt" class="ms-grid8-left">
+				19</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				9/12/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Minimization of a Function of one variable</td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				8.1</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">MidTerm Exam</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				20</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				11/12/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Gradient and Newton&#39;s Methods</td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				8.3</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				21</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				16/12/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Simulated Annealing and GA*</td>
+				<td width="110" style="width: 83pt" class="ms-grid8-even">
+				lecture notes</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">
+				optional</td>
+			</tr>
+			<tr height="40">
+				<td height="40" width="64" style="height: 30.0pt; width: 48pt" class="ms-grid8-left">
+				22</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				18/12/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Linear Constrained Optimization*</td>
+				<td width="110" style="width: 83pt" class="ms-grid8-even">
+				lecture notes</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">
+				optional, may be no lecture</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				23</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				23/12/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">ODE&#39;s 
+				&amp; Eular&#39;s method</td>
+				<td width="110" style="width: 83pt" class="style12">9.1, 9.2</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				24</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				25/12/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Runge-Kutta Methods</td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				9.5</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">&nbsp;</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				25</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Thu</td>
+				<td width="152" style="width: 114pt" class="ms-grid8-even">
+				30/12/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Boundary Value Problems*</td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				9.8</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">
+				optional</td>
+			</tr>
+			<tr height="20">
+				<td height="20" width="64" style="height: 15.0pt; width: 48pt" class="ms-grid8-left">
+				26</td>
+				<td width="80" style="width: 60pt" class="ms-grid8-even">Sat</td>
+				<td align="right" width="152" style="width: 114pt" class="ms-grid8-even">
+				1/1/2010</td>
+				<td width="258" style="width: 194pt" class="ms-grid8-even">
+				Finite Differnece Method*</td>
+				<td align="right" width="110" style="width: 83pt" class="ms-grid8-even">
+				9.9</td>
+				<td width="127" style="width: 95pt" class="ms-grid8-even">&nbsp;</td>
+				<td width="113" style="width: 85pt" class="ms-grid8-even">
+				optional</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	</table>
+<h2>Project</h2>
+<p><strong>Introduction</strong></p>
+<p>Even though Matlab is a handy tool for experimenting with numerical methods, 
+lower level languages like C++ can potentially achieve higher performance (with 
+careful implementation) and sometimes are the only available tools for some 
+platforms (e.g. embedded systems). In this project you are required to write a 
+simple C++ library that implements one of the following topics including 
+ALL the algorithms studied to solve them in this course:</p>
+<ol>
+	<li>Solving a Set of Linear Equations&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<strong>&nbsp;(Deadline: 10/12/2010)</strong></li>
+	<li>Interpolation and Curve Fitting&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<strong>&nbsp;&nbsp;&nbsp;&nbsp; (Deadline: 10/12/2010)</strong></li>
+	<li>Finding the roots of a single Nonlinear Equation&nbsp;&nbsp;&nbsp; 	<strong>(Deadline: 10/12/2010)</strong></li>
+	<li>Differentiation and Integration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<strong>(Deadline: 10/12/2010)</strong></li>
+</ol>
+<p><strong>Rules</strong></p>
+<p>You MUST implement the specified algorithm yourself and using ANY third-party 
+libraries or code within your project will be considered CHEATING. </p>
+<p>EVERY student 
+MUST write his own code and substantial similarity between codes will also be 
+considered cheating. </p>
+<p>You will be asked to present your project within 5 minutes 
+(Within the second week of December).</p>
+<p><strong>Deliverables:</strong></p>
+<ol>
+	<li>Source code of the library you developed organized as one or more classes.</li>
+	<li>Source code of a main function to test the operations of the library.</li>
+	<li>Documentation of your library that can be used to learn how to use it.</li>
+	<li>5 minutes presentation about the library.</li>
+	<li>5 minutes QA session about the library.</li>
+</ol>
+
+</body>
+
+</html>

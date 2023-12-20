@@ -1,0 +1,17 @@
+% example of Least Square solution to find a resistance
+B=[1.83810880488929,1.99127982643865,0.309399042734593,1.97361551736856,1.38336646995853,0.256162443517608]
+A=[0.814723686393179,0.905791937075619,0.126986816293506,0.913375856139019,0.632359246225410,0.0975404049994095]
+R=inv(A'*A)*A'*B
+A=A'; B=B';
+R=inv(A'*A)*A'*B
+
+%Showing the accuracy of the solution
+B2=R.*A
+plot(A,B,'o')
+hold on; plot(A,B2,'-r')
+
+%example of least norm
+A=[1,2,3;5,0,4]; B=[2.2;1.0];
+X=A'*inv(A*A')*B
+A*X-B
+
