@@ -8,9 +8,9 @@ layout: homelay
 
 ### Welcome!
 
-I am a principal researcher at the Data Science Research Laboratories, NEC, Japan  and an Associate Professor at Assiut University, Egypt.
+I am a principal researcher at the Data Science Research Laboratories, NEC CORPORATION, Japan  and a Professor at Assiut University, Egypt.
 
-I also hold a visiting researcher positions at  the Artificial Intelligence Research Center [AIRC], AIST and the center of Advanced Intelligence Project (AIP), RIKEN.
+I also hold a visiting researcher positions at the Artificial Intelligence Research Center [AIRC], AIST.
 
 My research interests span the areas of artificial intelligence applied to automated negotiation, robotics, HRI, multiagent systems, machine learning, and time series analysis.
 
@@ -31,3 +31,4 @@ And, I am still learning ...
 <!-- </div> -->
 <!-- <br/> -->
 <!--  -->
+<a href="https://info.flagcounter.com/rR23"><img src="https://s01.flagcounter.com/count/rR23/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_1/" alt="Flag Counter" border="0"></a>
