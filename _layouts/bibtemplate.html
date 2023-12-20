@@ -58,7 +58,12 @@ pre{
 {% endif %}
 
 {% if entry.award %}
+
+{% if entry.awardfile %}
 <a href="{{ site.url }}{{ site.baseurl }}/awards/{{ entry.awardfile }}"><button class="btn btn-success btm-sm"><i class="fa fa-sun-o"></i> {{ entry.award }}</button></a>
+{% else %}
+<a href="{{ endry.awardlink }}"><button class="btn btn-success btm-sm"><i class="fa fa-sun-o"></i> {{ entry.award }}</button></a>
+{% endif %}
 {% endif %}
 
 {% if entry.type == 'booklet' or entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'patent' or entry.type == 'book' or entry.type == 'inproceedings' or entry.type == 'incollection' or entry.type == 'report' %}

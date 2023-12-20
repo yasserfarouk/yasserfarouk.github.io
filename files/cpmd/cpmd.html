@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>CPMD Toolbox</title>
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+	font-size: x-large;
+	background-color: #00F3FF;
+}
+.auto-style3 {
+	background-color: #00F3FF;
+}
+.auto-style4 {
+	text-align: center;
+}
+.auto-style5 {
+	margin-left: 627px;
+	margin-bottom: 0px;
+}
+.auto-style6 {
+	font-size: large;
+}
+.auto-style8 {
+	vertical-align: text-top;
+}
+.auto-style9 {
+	font-style: normal;
+}
+</style>
+</head>
+
+<body>
+
+<p class="auto-style1"><strong>CPMD Toolbox</strong></p>
+<p>This toolbox contains a set of routines for sovling change point discovery 
+and motif discovery problems as well as several supporting routines for 
+evaluation, test dataset generation etc.</p>
+<p class="auto-style4">
+<img alt="CPMD toolbox" height="482" src="cpmd.png" width="898" /></p>
+<p class="auto-style1"><strong><span class="auto-style3">Download</span></strong></p>
+
+<p><strong>Copyright and terms of use</strong><br />
+<br />
+The code is made freely available for non-commercial uses only, provided that 
+the copyright header in each file not be removed, and suitable citation(s) (see 
+below) be made for papers published based on the code.<br />
+<br />
+The code is not optimized for speed, and we are not responsible for any errors 
+that might occur in the code.
+<br />
+Use of this code in teaching is allowed given that the authors are notified 
+of the intention of this usage.
+<br />
+Please read the copyright
+
+information of each routine before using it.<br /> <br />
+Please do not directly distribute this code without an agreement from the authors.
+
+<br />
+The copyright of the code is retained by the authors. By downloading/using the 
+code you agree to all the terms stated above.<br />
+<br />
+Yasser Mohammad and Toyoaki Nishida, "CPMD: A MATLAB Toolbox for Change Point 
+and Constraint Motif Discovery", 25th International Conference on Industrial, Engineering &amp; Other Applications of 
+Applied Intelligent Systems (IEA/AIE) 2012
+<br />
+Copyright (c) 2011, 
+Yasser Mohammad, Toyoaki Nishida. 
+All rights reserved.<br />
+<br />
+<br />
+Please direct all questions or comments to 
+<a href="mailto:yasser@ii.ist.i.kyoto-u.ac.jp">yasser@ii.ist.i.kyoto-u.ac.jp</a>,
+<a href="mailto:yasserm@aun.edu.eg">yasserm@aun.edu.eg</a>, or
+<a href="mailto:yasserfarouk@gmail.com">yasserfarouk@gmail.com</a> <br />
+<p>The toolbox is available for researchers from the authors. Please contact
+<a href="mailto:yasser@ii.ist.i.kyoto-u.ac.jp">yasser@ii.ist.i.kyoto-u.ac.jp</a> </p>
+<p>&nbsp;</p>
+<p class="auto-style1"><span class="auto-style3"><strong>Usage Examples</strong></span></p>
+<p><strong><span class="auto-style6">Change Point Disocvery</span> </strong></p>
+<table style="width: 100%">
+	<tr>
+		<td style="width: 50%">Change point discovery (CPD) is an important 
+		knowledge discovery problem. The problem is simply to find the locations 
+		at which the underlying generating dynamics of a signal (timeseries) 
+		changes. This does not -- in many cases -- correspond to an easily 
+		discernable change in the signal itself.<br />
+		<br />
+		<br />
+		CPD algorithms usually proceed in two steps: firstly, a score is 
+		assigned to every time step signifying the possibility of change at this 
+		point (it is not always a probability because it is not always 
+		normalized). We call this step <em>scoring </em>and the most general 
+		routing to achieve it in the toolbox is <em>cpd()</em>. <br />
+		<br />
+		<br />
+		Secondly, the scores are analyzed to localize change points. We call 
+		this step <em>localization </em>and routines that achieve this step are 
+		beginning with <em>findLoc</em> in the toolbox. <br />
+		<br />
+		In many cases these two steps are separate and one can change one of 
+		them without affecting the other generating a new algorithm variation. 
+		In continuous inspection applications, the focus is usually put onto the 
+		localization step because accurate and fast localization is of utmost 
+		important. In some other applications (e.g. physiological signal 
+		analysis), the scoring step is the important one and may be the 
+		localization step can be removed all-together. Given this, it is 
+		important to be able to evaluate the performance of both the scoring and 
+		localization steps.<br />
+		<br />
+		The Figure shows one time series with added zero mean gaussian noise and 
+		1 P-P standard deviation and the results of applying the four available 
+		CPD routines on the toolbox to it. Even with this very high noise level,
+		<em>cpd()</em> can still find some of the major changes in the signal.<br />
+		<br />
+		</td>
+		<td style="width: 50%">
+		<img class="auto-style5" width="100%" src="changes.png" align="right" /></td>
+	</tr>
+	</table>
+	<span class="auto-style6"><strong>Constrained Motif Discovery</strong></span> </strong>
+<table style="width: 100%">
+
+	<tr>
+		<td style="width: 50%">Motif discovery is a related problem which can be 
+		informally defined as efficiently finding unknown recurring patterns in 
+		long time series with no prior knowledge about their locations. The 
+		research in this problem have led to many techniques including the 
+		PROJECTIONS algorithm, PERUSE, and Gemoda&nbsp; among many others. With 
+		the exception of Gemoda which is quadratic in time and space 
+		complexities, these algorithms aim to achieve sub-quadratic time 
+		complexity by first looking for candidate motif <em>stems</em> using 
+		some heuristic method and then doing an exhaustive motif detection 
+		instead of motif discovery which is linear in time.<br />
+		<br />
+		Constrained Motif Discovery relates the aforementioned two problems. In 
+		CMD, the goal is to find unknown recurrent patterns but utilizing a set 
+		of constraints on motif locations. One way to introduce these 
+		constraints when no prior knowledge is available is to use a CPD 
+		algorithm and then search for the motifs around the discovered change 
+		points. In this sense a CMD algorithm can be used in conjunction with ta 
+		CPD algorithm to solve the general motif discovery problem. CMD has 
+		applications in activity detection, gesture recognition , and 
+		Human-Robot Interaction, among other fields.<br />
+		<br />
+		The toolbox provides both <em>mcfull()</em> and <em>dgr()</em> routines 
+		for solving this problem. The first is usually faster while the later 
+		provides more accurate detection of motif boundaries.<br />
+		The Figure shows, an example where the location of a differential drive 
+		robot wandering around was collected over time and motifs are discovered 
+		in it using <em>dgr()</em>.<br />
+		<br />
+		</td>
+		<td style="width: 50%">
+		<img class="auto-style5" width="100%" src="true.png" align="right" /></td>
+	</tr>
+
+</table>
+<p class="auto-style1"><span class="auto-style3"><strong>Sample Applications</strong></span></p>
+<p><strong>Physiological Signal Analysis</strong><img alt="phyisological" src="distinguish_Feature.png" width="50%" class="auto-style8" style="float: right" /></p>
+<p>RSST was used in [1] to distinguish between <em>natural</em> 
+and <em>unnatural</em> interaction behaviors by anaylzing the phsiological 
+signals of the partner. The results shown in&nbsp; the Figure reveal that RSST 
+based features were more effective than traditional feature types for 
+distinguishing the natural and unnatural conditions in a controlled experiments. 
+These results reported in [2] received the best paper award from IEA/AIE 2009.</p>
+<p>RSST was used in this work to find regions of fast changes in respiration, 
+skin conductance, and blood volume pulse and this was shown to provide more 
+accurate classification between the two conditions of the experiment compared 
+with traditional statistics.</p>
+
+<p style="text-align: justify;">[1] Yasser Mohammad and 
+			Toyoaki Nishida, Using Physiological Signals to Detect Natural 
+			Interactive Behavior, Applied Intelligence, 13(1) 79-92 [<font class="style3"><a href="http://springer.r.delivery.net/r/r?2.1.Ee.2Tp.1i99Xj.B%5fYzT6..H.L7qo.3Ruq.bW89MQ%5f%5fDFNQFRc0">original 
+			article</a> | <a href="../Publications/pdf/yasser_ai09_11P.pdf">local copy</a></font>]</p>
+<p style="text-align: justify;">[2] Yasser Mohammad and Toyoaki Nishida, Measuring Naturalness During Close Encounters Using Physiological Signal Processing, 
+			The Twenty Second International Conference on Industrial, Engineering & Other Applications of Applied Intelligent Systems (IEA/AIE 2009), June 2009, Taiwan, 
+			pp. 281-290<font class="style3">
+			[<a href="http://www.springerlink.com/content/80650457681w1213/">original 
+			article</a> | <a href="../Publications/pdf/yasser_iea09metric.pdf">local copy</a>]</font></p>
+			
+
+
+<p><strong>Learning Guided Navigation</strong><img alt="" class="auto-style8" src="discovery.png" style="float: right" width="25%" /></p>
+<p>In [3], we presented a novel algorithm for learning commands, actions and 
+their associations in a human-robot interaction context. The proposed learning 
+paradigm assumes that
+the robot can watch the operator instructing an expert actor
+(another robot or a human subject) and uses the proposed
+algorithm to discover the kinds of commands/gestures used
+by the operator, their occurrences, and their meaning in terms
+of the action primitives of the robot. A feasibility study
+was conducted using eight novice untrained human subjects
+to assess the applicability of the proposed algorithm. The
+evaluation experiment shows that the proposed algorithm
+can achieve its goals and build a probabilistic network of
+associations between action primitives and the gestures used
+by the operator after learning both of them. The algorithm
+can discover 83.3% of the gesture types and in average it
+finds 82% of the occurrences of discovered gestures. 100%
+of action types were discovered and the accuracy of detecting
+the discovered actions was 88.3%. Moreover the induced PN
+achieved 95.2% accuracy in predicting actor’s behavior.</p>
+<p>Motif discovery in this experiment used <em>dgr()</em> and change point 
+discovery used <em>rsst()</em><em class="auto-style9">.</em></p>
+<p>[3] 
+            Yasser Mohammad, Toyoaki Nishida, and Shogo
+		<font class="style3">
+			Okada</font>, Unsupervised Simultaneous Learning of Gestures, Actions and 
+			their Associations for Human-Robot Interaction, IEEE 
+			IROS 2009 (October 11 to 15, St. Louis, MO, USA), pp. 2537-2544
+		<font class="style3">
+			[<a href="http://portal.acm.org/citation.cfm?id=1733155">original 
+			article</a> | <a href="../Publications/pdf/yasser_iros09.pdf">local copy</a>]</font></p>
+<p><strong>Other Applications:</strong></p>
+<ul>
+	<li>Change-Causality Assessment. To be presented here soon</li>
+	<li>Fluid Imitation Learning. To be presented here soon</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

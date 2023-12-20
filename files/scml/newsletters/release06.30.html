@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>release06.30</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="scml-second-data-release">SCML Second Data Release</h1>
+<p>You can download the dataset <a href="https://drive.google.com/drive/folders/1_3s5HqMblvlMW5IyNn2tnVHXC79BiPaW?usp=sharing">here</a>.</p>
+<p>This data release contains three files (one per track).</p>
+<ul>
+<li><strong>Oneshot.zip (5.2G)</strong> contains logs from <strong>1,999</strong> one-shot world simulations that were conducted in <em>2021.06.16</em>.</li>
+<li><strong>Std.zip (1.2G)</strong> contains logs from <strong>2,000</strong> standard world simulations that were conducted since <em>2021.06.16</em>.</li>
+<li><strong>Collusion.zip (1.4G)</strong> contains logs from <strong>2,000</strong> collusion world simulations that were conducted since <em>2021.06.16</em>.</li>
+</ul>
+<p>To avoid revealing any specifics about <em>currently running</em> agents, the dataset was processed in the following ways:</p>
+<ol type="1">
+<li>All types and agent names are coded as <span class="math inline"><em>T</em>....</span> and <span class="math inline"><em>A</em>....</span>. This is done in way that ensures that all instantiations of a given actual agent type are mapped to the same coded agent type. For example all agents of type DecentralizingAgent will be mapped to agents of type code say T234 (or something similar) in every world.</li>
+<li>Worlds from all tournaments are mingled together and their names are also randomized. This avoids the possibility of mapping agent type codes to actual agent type names based on their performance on different tournaments.</li>
+<li>Only <em>some</em> of the worlds of each tournament are included to avoid the possibility of mapping agent type codes to actual agent type names based on their aggregate performance.</li>
+</ol>
+<p>It should be possible to visualize the logs of any world in the dataset using <a href="https://www.github.com/yasserfarouk/scml-vis">scml-vis</a>. Note that you can compile all (or some) of these worlds together in a single database allowing you to visualize multiple simulations at once. For example, if you have extracted <code>Oneshot.zip</code> into the folder <code>Oneshot</code>, you can visualize all worlds in it at once (will be very slow) by running <code>scmlv compile Oneshot</code> followed by <code>scmlv show -f Oneshot</code>.</p>
+<h2 id="detailed-content">Detailed Content</h2>
+<p>The dataset contains the following set of files for each world simulation. You can find more information about them <a href="http://www.yasserm.com/scml/scml2020docs/tutorials/04.logs_and_stats.html#getting-infromation-about-a-simulation">here</a>:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>params.json</td>
+<td>Basic world information</td>
+</tr>
+<tr class="even">
+<td>info.json</td>
+<td>Extended World information</td>
+</tr>
+<tr class="odd">
+<td>agents.json</td>
+<td>Agent information</td>
+</tr>
+<tr class="even">
+<td>negotiations.csv</td>
+<td>Negotiation records (if any)</td>
+</tr>
+<tr class="odd">
+<td>contracts.csv</td>
+<td>Contract records (Including exogenous contracts for std/collusion)</td>
+</tr>
+<tr class="even">
+<td>breaches.csv</td>
+<td>Breach records</td>
+</tr>
+<tr class="odd">
+<td>stats.csv</td>
+<td>World and agent statistics</td>
+</tr>
+</tbody>
+</table>
+<h4 id="oneshot-track">Oneshot track</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Record Type</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>negotiations</td>
+<td>8,930,289</td>
+</tr>
+<tr class="even">
+<td>contracts (excluding exogenous)</td>
+<td>5,535,216</td>
+</tr>
+<tr class="odd">
+<td>breaches</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>stats</td>
+<td>408,429</td>
+</tr>
+</tbody>
+</table>
+<h4 id="standard-track">Standard track</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Record Type</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>negotiations</td>
+<td>3,635,046</td>
+</tr>
+<tr class="even">
+<td>contracts (including exogenous)</td>
+<td>4,286,460</td>
+</tr>
+<tr class="odd">
+<td>breaches</td>
+<td>290, 339</td>
+</tr>
+<tr class="even">
+<td>stats</td>
+<td>147, 022</td>
+</tr>
+</tbody>
+</table>
+<h4 id="collusion-track">Collusion track</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Record Type</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>negotiations</td>
+<td>4,495,196</td>
+</tr>
+<tr class="even">
+<td>contracts (including exogenous)</td>
+<td>4,434,247</td>
+</tr>
+<tr class="odd">
+<td>breaches</td>
+<td>214,848</td>
+</tr>
+<tr class="even">
+<td>stats</td>
+<td>143,174</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

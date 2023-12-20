@@ -101,9 +101,22 @@ permalink: /about/
 </div>
 {% endif %}
 
+{% if site.data.recognitions %}
+<div class="jumbotron">
+### Recognition
+<ul>
+{% for rec in site.data.recognitions %}
+ <li> {{ rec.name }} </li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+{% if site.data.funders %}
 <div class="jumbotron">
   <h4>Sponsors</h4>
   <div style='display:block; text-align:center; margin-left:auto; margin-right:auto;'>
  {% for funder in site.data.funders %}<a href="{{ funder.url }}" target="_blank"><img src='{{ site.url }}{{ site.baseurl }}/images/{{ funder.image }}' style='max-height: 80px; max-width: 200px; margin: 1%'/></a>{% endfor %}
   </div>
 </div>
+{% endif %}
