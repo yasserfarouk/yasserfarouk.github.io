@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>scml-newsletter-may10</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="scml-newsletter-may-10th-2021">SCML Newsletter (May 10th 2021)</h1>
+<p>This is the first SCML newsletter. We plan to publish bi-weekly newsletters to keep you posted about news surrounding SCML 2021 (both the online and official competitions).</p>
+<p><strong>Important Request 🙏🙏🙏: Please upload an early version of your agent to the online competition website AS SOON AS POSSIBLE (hopefully before May 30th).</strong> This will be of tremendous help for us (by estimating the computational capacity we need) and yourself (by providing you with feedback about any issues in your agent as early as possible). <em>From our past experience, early and repeated submissions to the <a href="https://scml.cs.brown.edu">online competition website</a> helps tremendously in finding bugs that you many not notice otherwise</em>.</p>
+<ol type="1">
+<li><p>🖥️ We published a new tool called <code>SCML-VIS</code> for visualizing world simulations and tournaments. The <a href="https://www.github.com/yasserfarouk/scml-vis">tool</a> is developed as an open-source project on GitHub. You can watch a walk-through at <a href="https://youtu.be/BCDjnnSmIsk">Youtube</a>. We are open to pull-requests. Check the <a href="https://github.com/yasserfarouk/scml-vis/blob/main/README.md">README</a> for ideas.</p></li>
+<li><p>⚖️ We changed the way final scores are calculated for agents from using the <strong>median</strong> to using <strong>truncated mean</strong>. This is intended to balance the efficiency (i.e. using as many scores as possible in the final score) and robustness (i.e. insensitivity to outliers). Please check the <code>mechanics</code> section of the game description document for details.</p></li>
+<li><p>🔁 An updated version of the game description is now available online. There are no changes in the competition rules (other then the evaluation criterion mentioned above ). The updated version provides clearer exposition and improved presentation. You now can access this updated version for all tracks:</p>
+<ul>
+<li><strong>OneShot</strong>: <a href="http://www.yasserm.com/scml/scml2021oneshot.pdf">full description</a></li>
+<li><strong>Standard</strong>: <a href="http://www.yasserm.com/scml/scml2021.pdf">full description</a></li>
+<li><strong>Collusion</strong>: <a href="http://www.yasserm.com/scml/scml2021.pdf">full description</a></li>
+</ul></li>
+<li><p>🔁 Newer versions of SCML (<a href="https://pypi.org/project/scml/">0.4.2</a>) and NegMAS (<a href="https://pypi.org/project/negmas/">0.8.2</a>) have been published with bug fixes and other improvements. Please upgrade your development environment. If you are using pip, this is as simple as running <code>pip install -U negmas scml</code></p></li>
+<li><p>🔁 The tutorials were updated to provide even more examples of developing agents for <a href="http://www.yasserm.com/scml/scml2020docs/tutorials/02.develop_agent_scml2020_oneshot.html">OneShot</a> and <a href="http://www.yasserm.com/scml/scml2020docs/tutorials/03.develop_agent_scml2020.html">Standard</a> tracks.</p></li>
+<li><p>🤼 Our community is growing 📈:</p>
+<ul>
+<li><strong>21</strong> new registrations on <a href="https://scml.cs.brown.edu">the official website</a>.</li>
+<li><strong>15</strong> new questions/discussions on the <a href="https://github.com/yasserfarouk/scml/discussions">SCML Discussion Boards</a>. If you have any questions or ideas, consider sharing them there.</li>
+</ul></li>
+<li><p>Yasser is publishing a series of blog posts about SCML. You may find them useful. Two posts are already published:</p>
+<ul>
+<li><a href="https://yasserfarouk.medium.com/automated-netotiation-can-it-be-the-next-big-thing-b4840ea0f407">Automated Negotiation: Can it be the next big thing?</a></li>
+<li><a href="https://yasserfarouk.medium.com/scml-negotiate-your-way-to-fornute-f99849408e66">SCML: Negotiate Your Way to Fortune</a></li>
+</ul></li>
+</ol>
+<p><strong>Important Request (Intentional Repeat 😊 ): Please upload an early version of your agent to the online competition website AS SOON AS POSSIBLE (hopefully before May 30th).</strong> This will be of tremendous help for us (by estimating the computational capacity we need) and yourself (by providing you with feedback about any issues in your agent as early as possible).</p>
+<p><em>On Behalf of the SCML Organizing Committee</em></p>
+<p><em>yasser</em></p>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2021.06.01</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="scml-newsletter-june-1st-2021">SCML Newsletter (June 1st 2021)</h1>
+<p>This is the <em>second</em> SCML newsletter.</p>
+<p><strong>Important Request: Please upload an early version of your agent to the online competition website AS SOON AS POSSIBLE (hopefully before June 15th).</strong> This will be of tremendous help for us (by estimating the computational capacity we need) and yourself (by providing you with feedback about any issues in your agent as early as possible) <strong>and it will not at all affect your score in the official game</strong>.</p>
+<p><em>From our experience, early and repeated submissions to the <a href="https://scml.cs.brown.edu">online competition website</a> helps tremendously with finding bugs and issues that you many not notice otherwise</em>. It will also help us give you better data for your models in future data releases.</p>
+<ol type="1">
+<li>We updated the <a href="https://www.github.com/yasserfarouk/scml-vis">scml-visualizer (v0.2.6)</a> resolving some bugs and adding new visualizations. Please check the <a href="https://github.com/yasserfarouk/scml-vis/blob/main/README.md">updated README</a>.</li>
+<li>Newer versions of SCML (<a href="https://pypi.org/project/scml/">0.4.4</a>) and NegMAS (<a href="https://pypi.org/project/negmas/">0.8.3</a>) have been published with bug fixes. Please upgrade your development environment. If you are using pip, this is as simple as running <code>pip install -U negmas scml</code></li>
+<li>Our community is still growing:
+<ul>
+<li><strong>10</strong> teams have already uploaded early versions of their agents. We thank them.</li>
+<li><strong>12</strong> new registrants on <a href="https://scml.cs.brown.edu">the official website</a> since May 10th. We are up to <strong>32</strong> registrants so far in 2021 (<strong>72</strong> in total).</li>
+</ul></li>
+<li>The first data release with logs from some of the games ran in the tournaments conducted so far will be published online <strong>tomorrow</strong>. Please check <a href="https://scml.cs.brown.edu">the competition website</a> for the dataset.</li>
+<li>Some of you may have faced difficulties uploading their agent this week (i.e. the process finishes, but the agent does not get tested). This was caused by a resource allocation error in our task queue which should be resolved now. If you face a situation like this, just drop us an email. Hopefully, this problem will not happen again.</li>
+<li>We added a new <strong>optional</strong> base-class for SCMLOneShot. <code>OneshotIndNegotiatorsAgent</code> is designed to simplify the life of participants who want to relinquish control of each negotiation to a dedicated <code>Negotiator</code> with its own utility function. The main advantage of this base class is that it allows you to leverage <a href="http://ii.tudelft.nl/genius/">Genius</a> agents (including past ANAC winners). A tutorial was added <a href="http://www.yasserm.com/scml/scml2020docs/tutorials/02.develop_agent_scml2020_oneshot.html#using-independent-negotiators">here</a>. Please be sure to check the <em>many</em> caveats in the tutorial about using this type of agent before considering it. In most cases, it will not be beneficial to switch to this type of agent.</li>
+<li>We updated the distributions from which disposal cost distribution parameters and shortfall penalty distribution parameters <strong>in the one shot track</strong> are sampled. Please check Table 3 on Page 14 of the <a href="http://www.yasserm.com/scml/scml2021oneshot.pdf">game description</a>. This was done to increase the minimum quantity produced in a large set of test configurations when built-in agents played together.</li>
+</ol>
+<p><strong>Important Request (Intentional Repeat): Please upload an early version of your agent to the online competition website AS SOON AS POSSIBLE (hopefully before June 15th).</strong></p>
+<p><em>On Behalf of the SCML Organizing Committee</em></p>
+<p><em>yasser</em></p>
+</body>
+</html>
