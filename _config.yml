@@ -96,3 +96,4 @@ exclude:
   - switch_theme.sh
   - tags
   - Rakefile
+  - docs/
