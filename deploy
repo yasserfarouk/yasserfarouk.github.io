@@ -1,0 +1,12 @@
+#!bash
+msg=${1:-"deploying updates"}
+echo "Starting deployment to GitHub Pages"
+bundle exec jekyll build
+rm -rf docs
+cp -rf _site docs
+touch docs/.nojekyll
+git add .
+git commit -m"$msg"
+git pull
+git push
+echo "Done Deployment. Check actions in https://github.com/yasserfarouk/yasserfarouk.github.io/actions"
