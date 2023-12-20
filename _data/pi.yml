@@ -1,0 +1,30 @@
+- name: Prof. Yasser Mohammad
+  photo: headshot.jpg
+  info: Principal Researcher, Data Science Laboratories, NEC CORPORATION
+  email: ymohammad@ieee.org
+  github: https://github.com/yasserfarouk
+  researchgate: https://www.researchgate.net/profile/Yasser_Mohammad
+  scholar: https://scholar.google.com/citations?user=EdmGPiYAAAAJ&hl=en&oi=ao
+  linkedin: https://www.linkedin.com/in/yamohammad/
+  scopus: https://www.scopus.com/authid/detail.uri?authorId=14024801700
+  orcid: https://orcid.org/0000-0003-2272-7254
+  publons: https://publons.com/researcher/523585/yasser-mohammad/
+  academic: https://academic.microsoft.com/profile/762fh176-477i-4ei9-e5ei-49g778826042/yasserfarouk
+  dblp: https://dblp.org/pid/42/4866.html
+  cv: cv/yasser.pdf
+  # Change the number below to the number of "educations" you have (up to 6)
+  number_educ: 3
+  education1: "(2009) Ph.D. Informatics, Kyoto University"
+  education2: "(2005) M.S. Computers and Systems, Assiut University"
+  education3: "(1998) B.En. Electrical Engineering, Assiut University"
+  # education3: 
+  # education4: 
+  # education5: 
+  # education6: 
+  education1short: (2009) Ph.D. Informatics, Kyoto
+  education2short: (2005) M.S. Computers and Systems, Assiut
+  education3short: (1998) B.En. Electrical Engineering, Assiut
+  # education3short: 
+  # education4short: 
+  # education5short: 
+  # education6short: 
