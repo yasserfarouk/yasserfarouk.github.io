@@ -1,6 +1,7 @@
 #!bash
 msg=${1:-"deploying updates"}
 echo "Starting deployment to GitHub Pages"
+export JEKYLL_ENV=production
 bundle exec jekyll build
 rm -rf docs
 cp -rf _site docs
