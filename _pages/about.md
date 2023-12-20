@@ -27,6 +27,7 @@ permalink: /about/
   {% if member.dblp %} <a href="{{ member.dblp }}" target="_blank"><i class="ai ai-dblp-square fa-3x"></i></a> {% endif %}
   {% if member.scopus %} <a href="{{ member.scopus }}" target="_blank"><i class="ai ai-scopus-square fa-3x"></i></a> {% endif %}
   {% if member.orcid %} <a href="{{ member.orcid }}" target="_blank"><i class="ai ai-orcid-square fa-3x"></i></a> {% endif %}
+  {% if member.semanticscholar %} <a href="{{ member.semanticscholar }}" target="_blank"><i class="ai ai-semantic-scholar-square fa-3x"></i></a> {% endif %}
 
   <ul style="overflow: hidden">
   {% if member.number_educ == 1 %}
