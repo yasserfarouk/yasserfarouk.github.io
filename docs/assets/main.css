@@ -17459,7 +17459,7 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("yasserfarouk.github.io/images/thumbs/3dtrain.jpeg"); }
+  background-image: url("/images/thumbs/3dtrain.jpeg"); }
 
 .embed-container {
   position: relative;
@@ -17473,8 +17473,8 @@ img {
 
 .embed-container-spleen {
   height: 155px;
-  background-image: url("yasserfarouk.github.io/images/thumbs/spleen.jpg"); }
+  background-image: url("/images/thumbs/spleen.jpg"); }
 
 .embed-container-leuk {
   height: 112px;
-  background-image: url("yasserfarouk.github.io/images/thumbs/spleen.jpg"); }
+  background-image: url("/images/thumbs/spleen.jpg"); }
