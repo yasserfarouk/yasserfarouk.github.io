@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Reinforcement Learning and Automated Negotiation - A match made in gymnasium - Yasser Mohammad</title>
+  <meta name="description" content="Academic webpage of Y. Mohammad">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yasserfarouk.github.io/_posts/2024-02-15-Reinforcement-Learning-and-Automated-Negotiation.-A-match-made-in-gymnasium.html">
+  <link rel="shortcut icon" type ="image/x-icon" href="https://yasserfarouk.github.io/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+  <link rel="preconnect" href="https://player.vimeo.com">
+  <link rel="preconnect" href="https://i.vimeocdn.com">
+  <link rel="preconnect" href="https://f.vimeocdn.com">
+
+
+
+<!-- Google Analytics (original) -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+<!-- End Google Tag Manager -->
+
+
+<style>
+</style>
+</head>
+
+	<body>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id="
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="https://yasserfarouk.github.io/">
+     <img src="https://yasserfarouk.github.io/favicon.ico" width="30" height="30" style="margin-right:5px" class="d-inline-block align-top" alt="">
+      Yasser Mohammad
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" href="https://yasserfarouk.github.io/">Home</a>
+          </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://yasserfarouk.github.io/about">About</a>
+           </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://yasserfarouk.github.io/patents">Patents</a>
+           </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://yasserfarouk.github.io/publications">Publications</a>
+           </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://yasserfarouk.github.io/research">Research</a>
+           </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://yasserfarouk.github.io/talks">Talks</a>
+           </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://yasserfarouk.github.io/software">Software</a>
+           </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://yasserfarouk.github.io/teaching">Teaching</a>
+           </li> 
+          
+           <li class="nav-item">
+            <a class="nav-link" href="https://yasserfarouk.github.io/blog">Blog</a>
+           </li> 
+          
+        </ul>
+  </div>
+</nav>
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Reinforcement Learning and Automated Negotiation - A match made in gymnasium</h1>
+    <p class="post-meta"><time datetime="2024-02-15T20:00:00+09:00" itemprop="datePublished">Feb 15, 2024</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Reinforcement learning is probably one of the most successful ideas in the history of computing. It allowed us lowly computer geeks to build agents that beat or at least rival world champions in chess, go, backgammon, poker, Atari games, and, coolest of all, <a href="https://github.com/google-deepmind/pysc2">starcraft</a>. It has its role in the rise of generative AIs like ChatGPT through RLHL (Reinforcement Learning from Human Feedback). Nevertheless, RL is still far from achieving its full potential in the real world. One reason is that the world is messy, much messier than these games with well-defined rules. In this post, I will introduce you to a new game for RL that is directly applicable to the real world. Find a solution today, apply it tomorrow. This new game is technically challenging, just at the edge of the current state of the art in RL and multiagent RL research. If you are looking for a new challenge that is more than dogs vs. cats, look no further.</p>
+
+<h2 id="why-do-we-need-another-rl-environment">Why do we need another RL environment</h2>
+
+<p>This section goes through the history of RL in games to conclude that we need a new type of environment that is half-way between a Poker game and Atari.</p>
+
+<h4 id="initial-successes-of-rl-in-games">Initial successes of RL in Games</h4>
+
+<p>Reinforcement Learning is one of the most successful machine learning techniques for strategic reasoning and game playing problems. It was successfully applied to many games including Chess, Shogi, Diplomacy, and, recently, Sratego. RL shows promise in physical games as well including table tennis, and hockey. Most of these systems were designed to handle <strong>a single game</strong>. The lessons learned from mastering each of these games did help in mastering the next but usually with new insights added to handle the specific strategic features of the new game.</p>
+
+<h4 id="generalizing-to-multiple-games">Generalizing to Multiple Games</h4>
+
+<p>Some methods proved successful in multiple games. For example AlphaZero managed to beat specialist agents in Chess, Go, and Shogi. MuZero was able to master Chess, Go, Shogi and $57$ different Atari Games . EfficientZero managed to master $26$ different Atari games. These, and similar systems, are a step toward generality because the same learning algorithm is capable of handling multiple games. Nevertheless, an independent training is needed for each game.</p>
+
+<h4 id="generalist-agents">Generalist Agents</h4>
+
+<p>Achieving a general game-playing agent is one of the long-term goals of AI research. Recently, more attention was given to RL approaches that allow an agent to play multiple games with a <em>single training</em> on these (or similar) games. For example, Imbala was shown to be able to play multiple Atari games with a single policy.</p>
+
+<p>One step in this direction was General Game Playing (GGP) methods that present the agent with a formal description of a game in a domain-specific language. The agent is supposed to play competently any specifiable game. RL-GGP allowed testing of different RL algorithms in GGP settings. Monte Carlo Q-Learning was shown to achieve high performance on three GGP games (tic-tac-toe, connect-4 and hex). Generalized ALphaZero used RL to play four games (connect-4, breakthrough, babel, and pacman) specified using GGP and was shown to outperform the state of the art method at the time. Research in RL for GGP is usually focused on small games.</p>
+
+<p>Recently, Investigated different approaches to train a single model to play $41$ different Atari games including decision-transformer based sequence modeling, online RL, offline temporal difference, contrastive representation and behavior cloning . They found that decision transformer methods achieved the best performance and scaling but this required training on both expert and non-expert trajectories. But what can you do when you have neither expert nor non-expert trajectories? Enters <strong>Generalist Environments</strong>.</p>
+
+<h4 id="generalist-environments">Generalist Environments</h4>
+
+<p>Training specialist agents in a single environment that provides the same challenge every time (e.g. chess, GO) and training a generalist agent for completely unrelated environments (e.g. Atari) are two extremes for which this paper proposes a middle ground. We propose a single environment that encapsulates a large set of <em>related</em> problems by changing the <em>configuration</em> of the environment (i.e. a <em>generalist</em> environment). These problems can be considered individually in independent games or collectively as a single game.</p>
+
+<p>Training a specialist agent for each configuration of a generalist environment is possible but unscalable. Training an agent for all possible configurations of the generalist environment resembles training a generalist agent for multiple games. This type of environment is suitable for training <em>local experts</em> and then learning to activated them as needed for different configurations of the environment which is less explored in RL research. SCML belongs to this class of environments.</p>
+
+<h2 id="the-scml-competition">The SCML competition</h2>
+
+<p>Negotiations and auctions are the most widely used methods for reaching agreements in most real-world businesses. The simplest form of negotiation is bargaining in which partners exchange offers until one is accepted by everyone becoming a binding agreement (a contract). With With the wide-spread adoption of AI by businesses, internal operations of business units are increasingly being automated and automated negotiation between agents representing these business units is a promising direction that is starting to gain the interest of academics and industrialists.</p>
+
+<p>Automated negotiations promise faster more efficient agreements and more win-win deals to everyone.
+The Automated Negotiation Agents Competition (ANAC) started in 2010 in conjunction with the eights International Joint Conference on Autonomous Agents and Multi-Agent Systems (AAMAS 2010) with the aim of advancing the state of the art in automated negotiation research. The competition succeeded in generating novel research in agent design and expanded to encompass several leagues focusing on different subproblems of automated negotiation.</p>
+
+<p>Since 2019, a new league was added to ANAC called the <a href="https://scml.cs/brown.edu">Supply Chain Management League: SCML</a>. This competition is based on the real-world problem of negotiating agreements in real markets with applications in transportation, industrial manufacturing, energy production and management, and almost anywhere else buyers and sellers exist.</p>
+
+<p>Competitors in the SCM league are required to build an agent that controls a factory embedded in a simulated market. Besides controlling production, the agent should negotiate with other agents representing suppliers and consumers to secure supplies and sales. The score of a competitor is the median profit accumulated by all instantiations of her agent in thousands of simulations with varying configurations.</p>
+
+<p><img src="/images/scml.jpeg" alt="SCML simulation environment showing the production graph" /></p>
+
+<p>Each instantiation of the SCML simulation defines a multilateral general-sum incomplete-information stochastic game that is determined by the static information (configuration). Agents can be designed/trained to work in a specific configuration (specialist agents), across classes of configurations with common features (e.g. simulations in which the agent is a supplier or simulations with specific number of factories in each production level) leading to <em>local experts</em>, or for <em>any</em> SCML instantiation (generalist agents). That is what makes SCML a <em>generalist environment</em></p>
+
+<p>The main challenge faced by agents in SCML is a repeated concurrent many-to-many negotiation problem. The agent is negotiating concurrently with all its suppliers and consumers trying to maximize its profit in the current step while keeping an eye in maximizing future profits that can only be generating by future negotiations with the same partners.</p>
+
+<p>You can find a full description of the game <a href="https://yasserfarouk.github.io/files/scml/y2024/scml2024oneshot.pdf">here</a>.</p>
+
+<h3 id="how-to-participate">How to participate</h3>
+
+<p>To participate on this competition, you just need to install a single package (well may be two):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>scml
+</code></pre></div></div>
+
+<p>A nice companion is a streamlit visualizer that can help you debug your code:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>scml-vis
+</code></pre></div></div>
+
+<p>You can then just download the template for a <a href="https://yasserfarouk.github.io/files/scml/y2024/oneshot.zip">classic agent</a> or an <a href="https://yasserfarouk.github.io/files/scml/y2024/oneshot_rl.zip">RL agent</a> and start hacking away.</p>
+
+<h2 id="rl-for-scml">RL for SCML</h2>
+
+<p>We developed a gymnasium environment that exposes RL as a standard Gymnasium Environment.
+This SCML environment can be used for both RL and MARL. For simplicity of exposition, we only consider single-agent RL in this paper in which the RL agent is allowed to control a single factory (any factory) in each simulation. Extension to multi-agent RL is straightforward.</p>
+
+<p>SCML exemplifies some of the main challenges of real-world applications of RL:</p>
+
+<ul>
+  <li><strong>High dimensional state space:</strong> The amount of information available to the agent about the environment and other agents is huge.</li>
+  <li><strong>System constraints that can never be violated:</strong> The agent should never allow itself to go bankrupt.</li>
+  <li><strong>Stochastic systems with partial observability:</strong> The SCML simulation is always stochastic because exogenous contracts are sampled randomly (albeit from a known distribution) every period. Moreover, the agent cannot observe any private information of other agents in the environment.</li>
+  <li><strong>Poorly specified reward functions:</strong> The profit calculation method described in Section X defines the change in the agent’s balance in a given period. This is not the <em>utility</em> of the agent because it does not take into account the effect of its carried inventory and the change in future partner behavior based on the agent’s action during this period.</li>
+</ul>
+
+<p>Moreover, SCML also exhibits the problem of state-space ambiguity discussed in the introduction that plagues many real-world deployments of RL in business applications. Given the richness of information available to the agent, the designer can decide whether or not to use each individual piece of information as a part of the agent’s observation. Moreover, some of the static information (configuration) may be used to construct different <em>training contexts</em> to train multiple RL agents for specific situations, a commonly used strategy in real-world deployments of RL.</p>
+
+<p><img src="/images/rlscml.jpeg" alt="Training and using an RL agent for the SCML environment." /></p>
+
+<ul>
+  <li><strong>The Environment:</strong> The SCML environment presents an SCML simulation to the agent as a standard RL problem. (Footnote: SCML is available as a standard Farama gymnasium environment <a href="https://gym.openai.com/">https://gym.openai.com/</a>, making it compatible with most RL and MARL environments including SB3, RLLib, tf-agents, and torch-RL.)</li>
+  <li><strong>The Agent:</strong> The RL agent controls a single SCML factory receiving observations from the environment and returning actions as counter-offers that are passed to the agent’s suppliers and consumers inhabiting the simulation within the environment.</li>
+  <li><strong>Adapters:</strong> There are three adapters that mediate the agent-environment interaction:
+    <ul>
+      <li><strong>Observation Manager:</strong> Selects information to be <em>observed</em> by the agent and encodes it in a suitable RL format (i.e., discrete or continuous numeric values).</li>
+      <li><strong>Reward Function:</strong> The only signal directly provided to the agent is profit calculated per period. This signal is sparse Additionally, it doesn’t reflect the value of inventory or effects on future negotiations. The designer can use this component to provide a more informative reward to the agent (i.e., reward shaping).</li>
+      <li><strong>Action Manager:</strong> Responsible for <em>decoding</em> agent-generated actions into valid counter-offers for the simulation. Note: We provide a universal action manager usable with an SCML environment creating a continuous or discrete action space as needed.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="contextual-training-and-deployment">Contextual Training and Deployment</h4>
+
+<p>As discussed earlier, each SCML configuration defines a unique simulation environment with some shared characteristic with all other simulations (e.g. buyers always prefer lower prices). For example, a $L_0$-agent in a two-levels production graph with $10$ competitors and $2$ consumers is facing a very different market compared with another $L_0$-agent with 2 consumers and $10$ competitors.</p>
+
+<p>It is unlikely that a single policy or trained model can achieve adequate performance in <em>all</em> possible SCML configurations. Nevertheless, it is impractical to train a dedicated policy for each possible configuration.</p>
+
+<p>We define a <em>Training Context</em> as a data-structure the defines a set of configurations, an observation manager, an action manager and, optionally, a reward function. In the RL implementation of SCML, environments receive their configuration for simulation generation from a context object. Policies are trained for a specific context (i.e. using environments that share the same context). When deployed, the agent receives a set of contexts and associated trained policies (models). It checks the actual information of the simulation it finds itself inhabiting and selects the most similar context activating its corresponding policy, observation manager and action manager. This process is shown in the following diagram:</p>
+
+<p><img src="/images/deployment.jpeg" alt="Training and using an RL agent for the SCML environment." /></p>
+
+<p>The process of creating an RL solution for SCML involves the following steps:</p>
+
+<ol>
+  <li>
+    <p><strong>Define Contexts:</strong> Establish training contexts that capture the various market conditions and configurations your agent might encounter within the SCML simulation.</p>
+  </li>
+  <li>
+    <p><strong>Design Adapters (Per Context):</strong> For each context, specify:</p>
+
+    <ul>
+      <li><strong>Observation Manager:</strong> Function to select and encode relevant information for the agent’s state representation.</li>
+      <li><strong>Action Manager:</strong> Function to translate the agent’s actions into valid counter-offers within the simulation.</li>
+      <li><strong>Reward Function:</strong> Method to calculate informative rewards that guide the agent’s learning (consider going beyond immediate profit).</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Train Policies (Per Context):</strong> Use your preferred RL algorithm to train a policy for each defined context.</p>
+  </li>
+  <li>
+    <p><strong>Deployment and Context Switching:</strong></p>
+    <ul>
+      <li>Equip the agent with the trained policies and their associated contexts.</li>
+      <li>During deployment, have the agent analyze the current simulation to select the most appropriate context, activating the corresponding policy and adapters.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Illustrative Pseudocode:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">create_rl_solution</span><span class="p">(</span><span class="n">scml_env</span><span class="p">):</span>
+    <span class="n">contexts</span> <span class="o">=</span> <span class="n">define_contexts</span><span class="p">()</span>  <span class="c1"># Function to create list of Training Contexts
+</span>
+    <span class="k">for</span> <span class="n">context</span> <span class="ow">in</span> <span class="n">contexts</span><span class="p">:</span>
+        <span class="n">observation_manager</span> <span class="o">=</span> <span class="n">context</span><span class="p">.</span><span class="n">observation_manager</span>
+        <span class="n">action_manager</span> <span class="o">=</span> <span class="n">context</span><span class="p">.</span><span class="n">action_manager</span>
+        <span class="n">reward_function</span> <span class="o">=</span> <span class="n">context</span><span class="p">.</span><span class="n">reward_function</span>
+
+        <span class="n">policy</span> <span class="o">=</span> <span class="n">train_policy</span><span class="p">(</span><span class="n">scml_env</span><span class="p">,</span> <span class="n">observation_manager</span><span class="p">,</span> <span class="n">action_manager</span><span class="p">,</span> <span class="n">reward_function</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">contexts</span><span class="p">,</span> <span class="n">policies</span>
+
+<span class="k">def</span> <span class="nf">deploy_agent</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">scml_env</span><span class="p">,</span> <span class="n">contexts</span><span class="p">,</span> <span class="n">policies</span><span class="p">):</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>  <span class="c1"># Main simulation loop
+</span>        <span class="n">current_sim_config</span> <span class="o">=</span> <span class="n">scml_env</span><span class="p">.</span><span class="n">get_configuration</span><span class="p">()</span>
+        <span class="n">best_context</span> <span class="o">=</span> <span class="n">find_matching_context</span><span class="p">(</span><span class="n">current_sim_config</span><span class="p">,</span> <span class="n">contexts</span><span class="p">)</span>
+
+        <span class="n">observation</span> <span class="o">=</span> <span class="n">best_context</span><span class="p">.</span><span class="n">observation_manager</span><span class="p">(</span><span class="n">scml_env</span><span class="p">)</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">best_context</span><span class="p">.</span><span class="n">policy</span><span class="p">(</span><span class="n">observation</span><span class="p">)</span>
+        <span class="n">counter_offer</span> <span class="o">=</span> <span class="n">best_context</span><span class="p">.</span><span class="n">action_manager</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+        <span class="n">scml_env</span><span class="p">.</span><span class="n">step</span><span class="p">(</span><span class="n">counter_offer</span><span class="p">)</span>
+        <span class="p">...</span>
+</code></pre></div></div>
+
+<h2 id="take-away-message">Take-away message</h2>
+
+<ul>
+  <li>SCML provides a new and important type of environment for developing real-world relevant RL and MARL solutions.</li>
+  <li>The <a href="https://scml.cs.brown.edu">SCML competition</a> provides the perfect opportunity to develop RL-based solutions to this problem. Other than the joy of solving a new problem, the competition provides monetary prizes, and even travel scholarships (for selected students) to attend <a href="https://www.aamas2024-conference.auckland.ac.nz">AAMAS 2024</a>, one of the top AI conferences in the world.</li>
+  <li>Everything you need to start working on this problem is available at the <a href="https://scml.cs.brown.edu">competition website</a>.</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <br/>
+<section id="footer">
+<div class="container-footer">
+  <div class="panel-footer">
+	  <div class="row">
+		<div class="col-sm-4">
+		    <h5>About</h5>	
+            <p>Yasser Mohammad<br/> Principal Researcher<br/> NEC CORPORARTION<br/> Visiting Researcher<br/> AIST, Japan<br/> Professor of Intelligent Systems<br/> Assiut University, Egypt<br/>
+</p>
+		</div>
+
+		<div class="col-sm-4">
+		    <h5>Contact</h5>	
+            <p><a href="mailto:yasserfarouk@gmail.com" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Yasser via email</a> <br/>
+</p>
+		</div>
+
+		<div class="col-sm-4">
+		    <h5>Coordinates</h5>	
+            <p>Data Science Laboratories<br/> NEC CORPORATION<br/> Tokyo
+</p>
+		</div>
+	  </div>
+
+      <center><p>&copy 2024 Yasser Mohammad </p></center>
+	</div>
+  </div>
+</div>
+
+<script src="/assets/javascript/bootstrap/jquery.min.js"></script>
+<script src="/assets/javascript/bootstrap/bootstrap.bundle.min.js"></script>
+
+
+  </body>
+
+</html>
