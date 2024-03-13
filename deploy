@@ -1,4 +1,4 @@
-#!bash
+#!/bin/bash
 msg=${1:-"deploying updates"}
 echo "Starting deployment to GitHub Pages"
 export JEKYLL_ENV=production
