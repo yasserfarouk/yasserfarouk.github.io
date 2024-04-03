@@ -1,4 +1,4 @@
-#!bash
+#!/bin/bash
 msg=${1:-"deploying updates"}
 echo "Starting deployment to GitHub Pages"
 export JEKYLL_ENV=production
@@ -11,3 +11,4 @@ git commit -m"$msg"
 git pull
 git push
 echo "Done Deployment. Check actions in https://github.com/yasserfarouk/yasserfarouk.github.io/actions"
+open "https://github.com/yasserfarouk/yasserfarouk.github.io/actions"
