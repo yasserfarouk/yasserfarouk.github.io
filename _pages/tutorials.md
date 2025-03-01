@@ -24,11 +24,9 @@ permalink: /tutorials/
 
 <div class="jumbotron">
 ### Planned
-{% bibliography --query @incollection[keywords ^= invited] %}
 </div>
 
 <div class="jumbotron">
 ### Archive
-{% bibliography --query @incollection[keywords != invited] %}
 </div>
 
