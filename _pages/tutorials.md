@@ -2,7 +2,7 @@
 title: "Tutorials"
 layout: gridlay
 sitemap: false
-permalink: /talks/
+permalink: /tutorials/
 ---
 
 <style>
