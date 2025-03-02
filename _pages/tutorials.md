@@ -1,32 +1,15 @@
 ---
-title: "Tutorials"
-layout: gridlay
-sitemap: false
+layout: default
+layout: blog
+sitemap: true
 permalink: /tutorials/
 ---
 
-<style>
-.btn{
-    margin-bottom:5px;
-    padding-top:1px;
-    padding-bottom:1px;
-    padding-left:15px;
-    padding-right:15px;
-}
-.jumbotron{
-    padding:3%;
-    padding-bottom:10px;
-    padding-top:10px;
-    margin-top:10px;
-    margin-bottom:30px;
-}
-</style>
+<h1>Tutorials</h1>
 
-<div class="jumbotron">
-### Planned
-</div>
+{% for tutorial in site.tutorials %}
 
-<div class="jumbotron">
-### Archive
-</div>
-
+  <h2><a href="{{ post.url }}">{{ tutorial.title }}</a></h2>
+  <span class="post-date">{{ post.date | date_to_string }}</span>
+  {{ post.excerpt }}
+{% endfor %}
