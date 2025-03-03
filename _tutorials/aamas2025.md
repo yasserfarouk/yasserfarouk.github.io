@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "AAMAS2025 - Reinforcement Learning and Automated Negotiation"
+title: "AAMAS2025 - RL and Automated Negotiation"
 date: 2025-05-18
 categories: automated negotiation
 name: aamas2025
@@ -67,7 +67,7 @@ provides a new and interesting challenge for MARL and RL researchers because it
 is mapped into a group of non-zero-sum games with incomplete information which
 provides a middle ground between single-environment and General game-play
 environments
-[\[mohammad2024automated\]](https://doi.org/10.1109/MTS.2024.3364808).
+[\[mohammad2024automated\]](https://link.springer.com/chapter/10.1007/978-3-031-77367-9_2).
 
 Moreover, the tutorial is designed to be a true-tutorial rather than a
 summarization of recent results. We provide foundational knowledge in automated
@@ -75,16 +75,16 @@ negotiation (and to a lesser extent RL and MARL) as well as recent results in
 the area. But the whole tutorial is accompanied by a hands-on demonstration
 that shows every concept in action using de-facto standard libraries for RL
 (Gymnasium [\[gym\]](https://gymnasium.farama.org/)), MARL (PettingZoo
-[\[terry2021pettingzoo\]](https://arxiv.org/abs/2103.00733)) and automated
+[\[terry2021pettingzoo\]](https://pettingzoo.farama.org/)) and automated
 negotiation (NegMAS). Moreover, we introduce a new library NegMAS-RL that
 implements the main ideas introduced in the tutorial and allows the
 participants to easily reproduce state-of-the-art solutions and introduce new
 ones. We are preparing to open-source this library and it will be available on
-[GitHub](https://github.com/yasserfarouk/negmas-rl) and PyPi by March 2025.
+[GitHub](https://github.com/yasserfarouk/negmas-rl) and PyPi by April 2025.
 
 ## Detailed Outline
 
-* **Introduction to Automated Negotiation (55min)** This part of the tutorial introduces automated negotiation, the ANAC competition. The NegMAS [\[yasser19negmas\]](https://dl.acm.org/doi/10.1145/3341531.3354224) library is used throughout to showcase the concepts introduced. The main goal here is to introduce the automated negotiation problem in terms understandable to researchers with background in machine learning, reinforcement learning and related disciplines without prior knowledge of game-theory.
+* **Introduction to Automated Negotiation (55min)** This part of the tutorial introduces automated negotiation, the ANAC competition. The NegMAS [\[yasser19negmas\]](https://link.springer.com/chapter/10.1007/978-981-16-0471-3_4) library is used throughout to showcase the concepts introduced. The main goal here is to introduce the automated negotiation problem in terms understandable to researchers with background in machine learning, reinforcement learning and related disciplines without prior knowledge of game-theory.
     * **The Negotiation Problem (15min)** Different definitions of the negotiation problem, negotiation protocol, main differences between negotiations and auctions, and how to read a negotiation plot. We use NegMAS for the hands-on component.
     * **Classic Results (15min)** Introduces Nash bargaining problem, Rubinstein's protocol, and concepts of fairness in negotiation including the Nash bargaining solution, Kalai and Kalai-Smorodonisky solutions.
     * **Anatomy of an Agent (10min)** Uses the BOA (bidding-opponent modeling-acceptance) framework to define the building blocks of a negotiating agent.
@@ -101,18 +101,7 @@ ones. We are preparing to open-source this library and it will be available on
     * **Positioning AN in RL (5min)** We position the AN problem just introduced within the landscape of RL problems showing that it provides a middle ground between general game play with incomplete information and single incomplete information games.
 * **break (30min)**
 * **Developing an RL Agent for AN (45min)** This part of the tutorial aims at giving the participants confidence that they could grasp the general structure of reinforcement learning for automated negotiation and that they can participate in related research in the future. We plan for a real-time demonstration with an optional follow-along component.
-    * **Introduction to NegMAS RL (30min)** Introduces the NegMAS-RL framework for RL in automated negotiation.
-        * **Negmas-RL structure (10min)** Introduces the general architecture and main components of the NegMAS-RL library and how to use it to model different negotiation scenarios.
-        * **Observation manager (5min)** Describes available observation managers and their role in the negotiation process.
-        * **Action manager (5min)** Describe available action managers and their role in the negotiation process.
-        * **Reward function and training (10min)** Describes how to apply reward-shaping in NegMAS-RL and the outline of the training process.
-    * **Learning to negotiate in a Supply Chain using RL (15min)** Develops a complete end-to-end automated negotiation agent that uses utility-projection to learn how to negotiate in a supply chain environment. The demonstration shows how to represent, build, train and test the agent using NegMAS-RL tools.
 * **Recent Results in RL for AN (55min)** This part of the tutorial introduces recent works that applied reinforcement learning to different aspects of the automated negotiation problem. Each method will be cast within the framework of NegMAS-RL which makes it easy to appreciate the commonalities and differences between them.
-    * **Learning to offer (20min)** Designing an RL agent to generate offers during negotiation. Based on [\[bakker2019rlboa\]](https://dl.acm.org/doi/10.1145/3306127.3331908), [\[arslan2022actor\]](https://dl.acm.org/doi/10.1145/3511003.3511007).
-    * **Learning to accept (10min)** Designing an RL agent to implement the acceptance policy [\[razeghi2020acceptance\]](http://www.ifaamas.org/Proceedings/aamas2020/pdfs/p2119.pdf), [\[matsuo2024effective\]](https://arxiv.org/abs/2306.04636).
-    * **End-to-end approaches (10min)** Designing an end-to-end RL agent. Based on [\[sengupta2021rl\]](https://ojs.aaai.org/index.php/AAAI/article/view/17135), [\[higa2023reward\]](https://arxiv.org/abs/2305.16001).
-    * **Adapting to varying utility function (10min)** How can trained RL agents adapt to varying utility functions and opponent preferences? Based on [\[sengupta2022transfer\]](https://arxiv.org/abs/2205.12836).
-    * **What about MARL? (5min)** Introduces the challenges facing applying MARL to automated negotiation and the opportunity NegMAS-RL provides for overcoming them.
 * **Conclusions (10min)** The tutorial will be wrapped-up by a summary of the information introduced in the first session about automatic negotiation and will provide interesting directions of research inviting the audience to actively participate in pushing forward this exciting domain.
 
 
