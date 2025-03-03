@@ -12,5 +12,7 @@ permalink: /allnews.html
 <b>{{ article.date }}</b>
 
 {{ article.headline }}
+<br>
+{{ article.content }}
 {% endfor %}
 </div>
