@@ -34,6 +34,7 @@ include:
   - .htaccess
   - _pages
   - _posts
+  - _tutorials
 # Conversion
 markdown: kramdown
 highlighter: rouge
@@ -70,6 +71,11 @@ scholar:
   query: "@*"
   bibliography_list_attributes:
     reversed: "reversed"
+
+collections:
+  tutorials:
+    output: true
+
 exclude:
   - Gemfile
   - Gemfile.lock
