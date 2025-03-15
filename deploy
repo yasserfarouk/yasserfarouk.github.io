@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Updating CV"
+updatecv.sh
 msg=${1:-"deploying updates"}
 echo "Starting deployment to GitHub Pages"
 export JEKYLL_ENV=production
