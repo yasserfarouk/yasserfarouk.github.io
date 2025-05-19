@@ -10,11 +10,11 @@ summary: "An official tutorial of AAMAS 2025 discussing the application of reinf
 
 - **AAMAS 2025 Tutorials Home Page:**: [Link](https://aamas2025.org/index.php/conference/program/tutorials/){:target="_blank"}, Tutorial code is T1
 - **Presenter** [Yasser Mohammad](http://yasserm.com){:target="_blank"}: [NEC CORPORATION](https://www.nec.com){:target="_blank"}, [AIST](https://www.aist.go.jp/index_en.html){:target="_blanc"}
-- **Slides and Code**: Slides and source code for the tutorial will be available [here](https://github.com/yasserfarouk/aamas2025rlneg){:target="_blank"} by April 15th 2025.
-- **Time**: May 19th morning
+- **Slides**: Slides for the tutorial are available [here](https://github.com/yasserfarouk/aamas2025rlneg){:target="_blank"}.
+- **Code**: [here](https://github.com/yasserfarouk/negmas-rl-tutorial){:target="_blank"}.
+- **Time**: May 19th morning.
 - **Location**: Detroit Marriott at the Renaissance Center.
-- **Room**: TBD
-
+- **Room**: Marquette A.
 
 
 ## Brief Description
@@ -89,7 +89,7 @@ negotiation (NegMAS). Moreover, we introduce a new library NegMAS-RL that
 implements the main ideas introduced in the tutorial and allows the
 participants to easily reproduce state-of-the-art solutions and introduce new
 ones. We are preparing to open-source this library and it will be available on
-[GitHub](https://github.com/yasserfarouk/negmas-rl){:target="_blank"} and PyPi by April 2025.
+[GitHub](https://github.com/yasserfarouk/negmas-rl-tutorial){:target="_blank"} and PyPi by the end of May 2025.
 
 ## Detailed Outline
 
