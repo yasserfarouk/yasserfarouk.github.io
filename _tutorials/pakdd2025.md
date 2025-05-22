@@ -1,0 +1,81 @@
+---
+layout: page
+title: "Developing Data-Driven Automated Negotiating Agents"
+date: 2025-05-18
+categories: automated negotiation
+name: aamas2025
+permalink: tutorials/aams2025.html
+summary: "An official tutorial of PAKDD 2025 discussing building effective negotiation strategies machine learning and data-driven methods"
+---
+
+- **PAKDD 2025 Tutorials Home Page:**: [Link](https://pakdd2025.org/tutorials/){:target="_blank"}, Tutorial code is T5
+- **Presenter** [Yasser Mohammad](http://yasserm.com){:target="_blank"}: [NEC CORPORATION](https://www.nec.com){:target="_blank"}, [AIST](https://www.aist.go.jp/index_en.html){:target="_blanc"}
+- **Slides**: Slides for the tutorial are available [here](https://github.com/yasserfarouk/pakdd2025){:target="_blank"}.
+- **Time**: June 10, 2025 10:30AM
+- **Location**: Sydney Masonic Centre.
+- **Room**: TBD
+
+#### Background:
+Negotiation is one of the most prevalent mechanisms for achieving agreement among parties with overlapping interests, thereby facilitating their collaboration.
+*Automated* negotiation involves autonomous agents, either negotiating among themselves, or with humans on behalf of their (ultimately human) users.
+Negotiation research can be traced back to the seminal work of Nash on bargaining theory, and Rubinstein's analysis of the alternating offers protocol in the perfect-information case, both major game-theoretic advances.
+More recently, research in AN has attracted academic researchers in multi-agent systems
+and machine learning, as well as industrial researchers at companies like NEC, Pactum and `mysupply`.
+A testimony to this recent growth is the steady increase in interest in the International Automated Negotiating Agents Competition (ANAC), which was first hosted at AAMAS in 2010 with 7 teams, moved to IJCAI in 2017, and its 15th incarnation was completed in conjunction with AAMAS in 2024 with 48 teams from all over the world.
+The timing is right to improve AN technology, because of the ever-increasing demand for AI that applies to real business operations, and the pressing need for these AIs to be able to reach agreement in a distributed manner to be of maximal benefit to their users. Hence, the timing is also right for this tutorial which focuses on machine learning data-driven approaches to the problem.
+Finally, AN provides a unique venue for connecting game theory, machine learning, and data mining that goes beyond classic games.
+
+---
+
+## Tutorial Information
+
+**Duration:** Half-day (3 hours)
+
+**Specific Goals and Objectives:**
+
+This tutorial will introduce the audience to the field of automated negotiation and how to apply machine learning and data-driven methods to create effective negotiation strategies.
+Moreover, the tutorial will familiarize the participant with NegMAS (the de-facto standard AN platform).
+More specifically, this tutorial will give the listeners the tools needed to participate in the AN research and the ANAC competition by developing their own data-driven negotiation strategies.
+
+**Expected Background of the Audience:**
+The proposed tutorial is geared towards newcomers to the area, so the prerequisites are minimal.
+Furthermore, it is self-contained; all the necessary concepts will be defined.
+Knowledge of basic game-theoretic concepts like equilibrium, Pareto-optimality would be helpful, but is not required.
+
+**Audio-Visual Equipment:** Other than a projector for presenting the slides, and Jupyter notebooks, no special equipment is needed.
+
+**General Outline:** The tutorial consists of four main parts: (1) A general introduction to the problem of automated negotiation in which we motivate the problem, discuss classic results, and describe the most important analysis concepts and tools. (2) We then demonstrate how to map all of these concepts to the NegMAS automated negotiation framework and present some of the most widely used -- and most successful -- negotiation strategies. (3) With the aforementioned grounding in automated negotiation theory, the third part of the tutorial discusses applications of data-driven machine learning approaches to AN with specific state-of-the-art examples for each sub-problem discussed. (4) The final part of the tutorial focuses on reinforcement learning as applied to AN, again, with specific state-of-the-art examples for each approach presented.
+
+---
+
+## Detailed Outline
+This section describes in detail the outline of the tutorial. We provide a relevant paper that will be the base of the content of most sections/subsections.
+
+-   **1. Introduction and Classic Results (30 min):** This part of the tutorial introduces the field of automated negotiation, describing the key problems, as well as classic results and recent advances:
+    -   **Why Automated Negotiation (5 min):** Motivates the tutorial by presenting real-world examples of applications of automated negotiation, as well as the exciting research problems it raises.
+    -   **The Negotiation Problem (5 min):** Define the negotiation problem, negotiation protocols, and articulate the main differences between negotiations and auctions [mohammad2023generalized].
+    -   **Utility Functions and outcome metrics (5 min):** Gives a taxonomy of utility functions for AN. We also introduce the most common metrics for analyzing negotiation outcomes, including the Pareto-frontier, welfare, fairness, the Nash bargaining solution [nash1950bargaining].
+    -   **Classic Results (15 min):** Presents game-theoretic analyses of negotiations, and provides some of the classic results including the prefect equilibrium result of Rubinstein.
+        -   **Nash Bargaining Solution:** Introduces Nash's bargaining game and his axiomatic solution [nash1950bargaining].
+        -   **Other Solutions:** Describes alternative solutions, i.e., other ways to reason about bargaining outcomes including the Kalai and Kalai-Somoronisky solutions.
+        -   **Rubinstein's Game:** Explains Rubinstein's solution to the extended bargaining game [rubinstein1982perfect].
+
+-   **2. Automated Negotiation Protocols and Strategies (30 min):** The next part of the tutorial is part demonstration and part hands-on experience of applying the techniques introduced so far using the NegMAS platform.
+    -   **Negotiation Protocols and strategies (15 min):** Introduces the most widely used negotiation protocols with a focus on the Alternating Offers Protocol. Also, describes the basic structure of a negotiating agent and the simplest time-based and behavior-based strategies as well as the Bidding-Acceptance-Opponent Modeling framework (BOA) which is the most widely used decomposition of negotiating agents [baarslag2014decoupling].
+    -   **NegMAS: A platform for automated negotiation (15 min):** Describes the design and philosophical principles underlying NegMAS, and walks the audience through the installation process and how to develop a strategy using it [yasser19negmas].
+
+-   **3. Data-Driven Machine Learning in Automated Negotiation (45 min):** Describes recent advances in data-driven ML approaches for AN:
+    -   **Learning Opponent preferences (15 min):** Describes different opponent modeling approaches like Bayesian Learning, Frequents approaches,etc [baarslag2016learning, aydougan2022time].
+    -   **Data-driven bidding strategies (15min):** Describes data-driven methods for learning offering strategies [baarslag2014decoupling, mohammad2023optimal].
+    -   **Predicting Outcomes of Automated Negotiations (15min):** Describes other applications like prediction of negotiation outcome [tijdeman2024predicting], and opponent strategy classification [li2021data].
+
+-   **Break (15 minutes)** 休憩
+
+-   **4. Recent Results in RL for AN (55min):** Describes recent advances in Reinforcement Learning approaches to AN:
+    -   **Reinforcement Learning in Automated Negotiation (15 min):** Describes recent results in applying reinforcement learning to different parts of negotiation strategies, including the bidding and acceptance strategies.
+    -   **Learning bidding strategy (10min):** Designing an RL agent to generate offers during negotiation. Based on [bakker2019rlboa].
+    -   **Learning acceptance strategy (10min):** Designing an RL agent to implement the acceptance policy [matsuo2024effective].
+    -   **End-to-End approaches (10min):** Designing an end-to-end RL agent. Based on [sengupta2021rl].
+    -   **Advanced approaches (10min):** Discusses adaptation to varying utility functions and opponent preferences [sengupta2022transfer], and offline RL applied to records of past negotiations [chen2024anoto].
+
+-   **5: Conclusion (5 min):** We will wrap up the tutorial.
