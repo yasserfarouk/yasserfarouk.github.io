@@ -15,6 +15,8 @@ permalink: /publications/
 }
 </style>
 
+This is a partial publication list. Please find the complete list in my [cv](https://yasserfarouk.github.io/cv/yasser.pdf).
+
 <div class="jumbotron">
 ### Preprints
 {% bibliography --query @unpublished %}
