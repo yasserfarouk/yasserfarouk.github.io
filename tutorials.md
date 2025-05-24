@@ -8,7 +8,7 @@ permalink: /tutorials/
 <h1>Tutorials</h1>
 
 {% assign sorted_tutorials = site.tutorials | sort: "date" | reverse %}
-{% for tutorial in site.sorted_tutorials %}
+{% for tutorial in sorted_tutorials %}
   <h4>
     <a href="{{ tutorial.url }}">
       {{ tutorial.title }}
