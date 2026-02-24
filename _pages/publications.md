@@ -17,10 +17,10 @@ permalink: /publications/
 
 This is a partial publication list. Please find the complete list in my [cv](https://yasserfarouk.github.io/cv/yasser.pdf).
 
-<div class="jumbotron">
+<!-- <div class="jumbotron">
 ### Preprints
 {% bibliography --query @unpublished %}
-</div>
+</div> -->
 <div class="jumbotron">
 ### Books
 {% bibliography --query @book %}
