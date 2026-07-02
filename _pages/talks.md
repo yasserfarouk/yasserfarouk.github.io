@@ -23,13 +23,18 @@ permalink: /talks/
 </style>
 
 <div class="jumbotron">
-### Invited talks
-{% bibliography --query @booklet %}
-{% bibliography --query @incollection[keywords == invited] %}
+### Invited Talks
+{% bibliography --query @misc[keywords = talk] %}
 </div>
 
-<!-- <div class="jumbotron"> -->
-<!-- ### Regular talks -->
-<!-- {% bibliography --query @inproceedings %} -->
-<!-- </div> -->
+<div class="jumbotron">
+### Industrial Talks
+{% bibliography --query @misc[keywords = industrialtalk] %}
+</div>
+
+<div class="jumbotron">
+### Tutorials
+See the dedicated [tutorials]({{ site.url }}{{ site.baseurl }}/tutorials/) page for full materials, or the list below for the complete record.
+{% bibliography --query @misc[keywords = tutorial] %}
+</div>
 

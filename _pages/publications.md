@@ -32,13 +32,19 @@ This is a partial publication list. Please find the complete list in my [cv](htt
 </div>
 
 <div class="jumbotron">
-### Invited Talks
-{% bibliography --query @booklet%}
+### Invited &amp; Industrial Talks
+{% bibliography --query @misc[keywords = talk || keywords = industrialtalk] %}
 </div>
+
+<div class="jumbotron">
+### Tutorials
+{% bibliography --query @misc[keywords = tutorial] %}
+</div>
+
 <div class="jumbotron">
 
 ### Journal Articles
-{% bibliography --query @article[keywords != local]%}
+{% bibliography --query @article[keywords != localjournal]%}
 </div>
 
 <div class="jumbotron">
@@ -48,29 +54,19 @@ This is a partial publication list. Please find the complete list in my [cv](htt
 
 <div class="jumbotron">
 ### International Conferences
-{% bibliography --query @inproceedings[keywords != local & keywords != workshop] %}
+{% bibliography --query @inproceedings[keywords != workshop && keywords != localconference] %}
 </div>
 
 <div class="jumbotron">
 ### International Workshops
-{% bibliography --query @inproceedings[keywords ^= workshop] %}
+{% bibliography --query @inproceedings[keywords = workshop] %}
 </div>
 
 <div class="jumbotron">
 ### Local Journals
-{% bibliography --query @article[keywords ^= local]%}
+{% bibliography --query @article[keywords = localjournal]%}
 </div>
 <div class="jumbotron">
 ### Local Conferences
-{% bibliography --query @inproceedings[keywords ^= local] %}
-</div>
-
-<!-- <div class="jumbotron"> -->
-<!-- ### Other Publications -->
-<!-- {% bibliography --query @misc %} -->
-<!-- </div> -->
-
-<div class="jumbotron">
-### Software
-{% bibliography --query @software %}
+{% bibliography --query @inproceedings[keywords = localconference] %}
 </div>

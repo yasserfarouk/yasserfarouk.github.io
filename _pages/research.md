@@ -28,34 +28,218 @@ iframe {
   display: inline;
   vertical-align: middle;
 }
+.research-figure {
+  width: 100%;
+  border: 1px solid #dde6ee;
+  background: white;
+  padding: 6px;
+}
+.research-pubs {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+.research-pubs li {
+  margin-bottom: 4px;
+}
 </style>
 
 ## Research
 
-<div class="jumbotron">
-<div class="col-md-12 col-sm-12">
-<h4>Mulltiagent Systems</h4>
-I focus on automated negotiation
-</div>
-</div>
+My research sits at the intersection of multiagent systems, robotics and machine learning, with automated
+negotiation as the connecting thread for the last decade. Before that, my PhD and postdoctoral work focused on
+human-robot interaction and the time-series/pattern-discovery tools needed to make sense of embodied interaction
+data --- tools that I still use today when mining negotiation logs and sensor streams. The four areas below give an
+overview, each with a handful of representative publications (the [full list]({{ site.url }}{{ site.baseurl }}/publications/) and
+[patents]({{ site.url }}{{ site.baseurl }}/patents/) have the complete record).
 
 <div class="jumbotron">
-<div class="col-md-12 col-sm-12">
-<h4>Robotics/HRI</h4>
+<div class="row align-items-center">
+<div class="col-md-4 col-sm-12">
+<img class="research-figure" src="{{ site.url }}{{ site.baseurl }}/images/research/negotiation-scml.jpeg" alt="An SCML supply-chain world: factories negotiate contracts along a production pipeline from raw material to finished product"/>
+</div>
+<div class="col-md-8 col-sm-12">
+<h4><b>Automated Negotiation &amp; Multiagent Systems</b></h4>
 
+<p>This is the focus of most of my work since 2018. Automated negotiation asks how autonomous agents can reach
+agreements on their own --- over contracts, resources, or schedules --- without a human in the loop for every deal.
+I work on the theory (protocols, optimal strategies, and mechanism design), the infrastructure needed to study it at
+scale, and its application to real supply chains.</p>
+
+<p>On the theory side, I introduced the <b>TAU (Tentative Acceptance Unique Offers) protocol</b>, a negotiation
+protocol that lets agents reach efficient agreements without ever revealing --- or even needing to model --- their
+partner's utility function
+(<a href="https://doi.org/10.1007/s10458-026-09745-9" target="_blank">Mohammad, 2026</a>,
+<a href="https://doi.org/10.3233/FAIA251410" target="_blank">Mohammad, ECAI 2025</a>). This builds on earlier work
+on optimal time-based bidding strategies
+(<a href="https://doi.org/10.1007/s10489-022-03662-6" target="_blank">Mohammad, 2023</a>), generalized bargaining
+protocols that unify auctions and negotiations under one framework
+(<a href="https://doi.org/10.1007/978-981-99-8391-9_21" target="_blank">Mohammad, AJCAI 2023</a>), and concurrent
+negotiation --- where an agent runs many linked negotiations at once against a single global utility function
+(<a href="https://doi.org/10.1007/s10458-021-09512-y" target="_blank">Mohammad, 2021</a>). I also work on
+preference elicitation during the negotiation itself using a Value-of-Information criterion so an agent only asks
+for information that is worth the cost of asking
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2019voi" target="_blank">Mohammad &amp; Nakadai, AAMAS 2019</a>).</p>
+
+<p>Much of this research would not be reproducible without shared infrastructure, so I built and maintain
+<a href="https://negmas.readthedocs.io" target="_blank"><b>NegMAS</b></a>, an open-source platform for developing
+and evaluating negotiating agents embedded in simulations
+(<a href="https://doi.org/10.1007/978-3-030-69322-0_23" target="_blank">Mohammad et al., PRIMA 2020</a>), and the
+<b>Supply Chain Management League (SCML)</b>, an ANAC competition track and benchmark environment where agents
+negotiate contracts up and down a multi-tier manufacturing chain --- from raw silicon to printed circuit boards in
+the running example --- under real-world pressures like bankruptcy risk and delivery penalties
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2020scmljournal" target="_blank">Mohammad et al., JSAI 2020</a>,
+<a href="https://doi.org/10.1007/978-3-030-33792-6_10" target="_blank">Mohammad et al., PRIMA 2019</a>). More
+recently, SCML was repackaged as a generalist Gymnasium/PettingZoo environment for RL and MARL research
+(<a href="https://doi.org/10.1007/978-3-031-77367-9_2" target="_blank">Mohammad, Nakadai &amp; Greenwald, PRIMA 2024</a>),
+and I co-organize the <a href="{{ site.url }}{{ site.baseurl }}/files/anl/anl.pdf" target="_blank">Automated
+Negotiation League (ANL)</a> and the Human-Agent Negotiation (HAN) league at ANAC, and have co-authored the annual
+ANAC challenge/results reports for several years running
+(<a href="https://doi.org/10.48550/arXiv.2604.13914" target="_blank">2025</a>,
+<a href="https://doi.org/10.5555/3709347.3744072" target="_blank">2024</a>,
+<a href="https://doi.org/10.1007/978-3-030-66412-1_23" target="_blank">2019</a>).</p>
+
+<p>Reinforcement learning is a growing part of this agenda: with Ayan Sengupta we built RL-based negotiating agents
+that adapt their strategy mid-negotiation and transfer across domains and opponents
+(<a href="https://arxiv.org/abs/2102.03588" target="_blank">Sengupta, Mohammad &amp; Nakadai, AAMAS 2021</a>,
+<a href="https://doi.org/10.24963/ijcai.2022/67" target="_blank">Sengupta, Nakadai &amp; Mohammad, IJCAI 2022</a>),
+and I have argued for treating negotiation as a distinctive middle ground between single-agent RL and full
+general-game-play for the MARL community. This line of work is now moving toward using generative AI --- LLMs as
+negotiators and as tools for negotiation analytics
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2025generativeai" target="_blank">Mohammad, Chen, Higa, Ando &amp; Morinaga, 2025</a>)
+--- and toward using time-series forecasting to make procurement negotiation proactive rather than reactive
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2026forecasting" target="_blank">Mohammad &amp; Chen, AAMAS 2026</a>).
+Most of this work (10 patents and counting) is done jointly with NEC Corporation, where it feeds directly into
+industrial negotiation-support products.</p>
+</div>
 </div>
 </div>
 
 <div class="jumbotron">
-<div class="col-md-12 col-sm-12">
-<h4>Time Series Anallysis</h4>
+<div class="row align-items-center">
+<div class="col-md-4 col-sm-12">
+<img class="research-figure" src="{{ site.url }}{{ site.baseurl }}/images/research/robotics-hri.svg" alt="A human and a robot interacting, illustrating imitation and gaze-based human-robot interaction research"/>
+</div>
+<div class="col-md-8 col-sm-12">
+<h4><b>Robotics &amp; Human-Robot Interaction</b></h4>
 
+<p>My PhD (Kyoto University, under Toyoaki Nishida) and the years after it were spent asking a simple question:
+how can a robot learn to interact naturally with people, the way people learn to interact with each other ---
+by watching, imitating, and adapting --- rather than through hand-coded scripts? This work is summarized in the
+book <a href="https://doi.org/10.1007/978-3-319-25232-2" target="_blank"><i>Data Mining for Social Robotics:
+Toward Autonomously Social Robots</i></a> (Mohammad &amp; Nishida, Springer, 2015).</p>
+
+<p>A recurring theme is <b>imitation as a discovery problem</b> rather than a copying problem: before a robot can
+imitate a demonstrator, it has to work out <i>what</i> is worth imitating out of a continuous, noisy stream of
+motion. My "Fluid Imitation" framework addressed exactly this
+(<a href="https://doi.org/10.1007/s12369-012-0153-z" target="_blank">Mohammad &amp; Nishida, 2012</a>), and later
+work looked at how humans judge a robot's imitative skill, including the surprising finding that a robot imitating
+the human back (back-imitation) changes how natural its behavior is perceived to be
+(<a href="https://doi.org/10.1007/s12369-015-0282-2" target="_blank">Mohammad &amp; Nishida, 2015</a>). Related
+papers tackled the correspondence problem for mapping human gestures onto a humanoid's very different body in
+closed form
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2013correspondence" target="_blank">Mohammad &amp; Nishida, AMT 2013</a>),
+and generating human-like motion for a humanoid performing a shadowing task
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2014shadowing" target="_blank">Mohammad &amp; Nishida, CTS 2014</a>).
+With Mostafa Hussein, this line continued into practical learning-from-demonstration tools, including a ROS
+package for continuously teaching a robot arm to write by demonstration
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#hussein2017cold" target="_blank">Hussein, Mohammad, Ali &amp; Nishida, ICMA 2017</a>)
+and a variational-Bayesian approach to LfD
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#hussein2015variational" target="_blank">Hussein, Mohammad &amp; Ali, IEA/AIE 2015</a>).</p>
+
+<p>The other half of natural interaction is <b>perception and attention</b>: I worked on autonomous development of
+gaze behavior so a robot can learn where and when to look during a conversation instead of using scripted gaze
+patterns
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2013learningwhere" target="_blank">Mohammad &amp; Nishida, 2013</a>,
+<a href="https://doi.org/10.1007/s10489-009-0180-0" target="_blank">Mohammad &amp; Nishida, 2010</a>), and on using
+physiological signals (skin conductance, heart rate) as an objective proxy for how "natural" an interaction felt to
+the human participant
+(<a href="https://doi.org/10.1007/s10489-010-0241-4" target="_blank">Mohammad &amp; Nishida, 2010</a>). More
+recently, with Abdullah Ahmed and colleagues, this extended to end-to-end deep reinforcement learning for mobile
+robot navigation in dynamic environments shared with people
+(<a href="https://doi.org/10.1109/MESA55290.2022.10004394" target="_blank">Ahmed, Mohammad, Parque &amp; El-Hussieny, MESA 2022</a>).</p>
+</div>
 </div>
 </div>
 
 <div class="jumbotron">
-<div class="col-md-12 col-sm-12">
-<h4>Machine Learning</h4>
+<div class="row align-items-center">
+<div class="col-md-4 col-sm-12">
+<img class="research-figure" src="{{ site.url }}{{ site.baseurl }}/files/cpmd/discovery.png" alt="Pipeline for discovering change points and recurring motifs in multidimensional command and action streams"/>
+</div>
+<div class="col-md-8 col-sm-12">
+<h4><b>Time-Series Analysis, Change-Point &amp; Motif Discovery</b></h4>
 
+<p>Understanding interaction data in the work above required tools that did not exist yet at the time, which led to
+a parallel research thread on unsupervised time-series analysis: finding <i>when</i> a multidimensional signal
+changes behavior (change-point discovery) and <i>which</i> sub-sequences repeat meaningfully across it (motif
+discovery), without knowing in advance what to look for or how long a pattern should be.</p>
+
+<p>The starting point was <b>Robust Singular Spectrum Transform (RSST)</b>, a change-point detection method robust
+to noise and outliers that won a Best Paper Award at IEA/AIE 2009
+(<a href="https://doi.org/10.1007/978-3-642-02568-6_13" target="_blank">Mohammad &amp; Nishida, 2009</a>), later
+extended and benchmarked against other SSA-based algorithms, again with a best-paper recognition
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2011ssacomparison" target="_blank">Mohammad &amp; Nishida, SII 2011</a>).
+On top of change-point discovery I developed a family of <b>constrained motif discovery</b> algorithms that find
+approximately-recurring patterns whose length and number of repetitions are not known beforehand
+(<a href="https://doi.org/10.1007/s00354-009-0068-x" target="_blank">Mohammad &amp; Nishida, 2009</a>), including
+exact algorithms that are simultaneously invariant to the pattern's length, scale and mean
+(<a href="https://doi.org/10.1007/s10489-015-0684-8" target="_blank">Mohammad &amp; Nishida, 2016</a>) and a
+shift-density-estimation approach for approximately recurring motifs
+(<a href="https://doi.org/10.1007/s10489-014-0531-3" target="_blank">Mohammad &amp; Nishida, 2015</a>). With Yomna
+Rayan, this was extended to multidimensional permutation entropy as a faster distance measure for constrained motif
+discovery
+(<a href="https://doi.org/10.1007/978-3-030-14799-0_20" target="_blank">Rayan, Mohammad &amp; Ali, ACIIDS 2019</a>).</p>
+
+<p>These algorithms were packaged into two open-source Matlab toolboxes, <b>CPMD</b> (change-point and constrained
+motif discovery,
+<a href="https://doi.org/10.1007/978-3-642-31087-4_13" target="_blank">Mohammad, Ohmoto &amp; Nishida, IEA/AIE 2012</a>)
+and its successor <b>MC²</b>, which adds causality discovery between processes to the same pipeline
+(<a href="https://doi.org/10.1007/978-3-319-42007-3_12" target="_blank">Mohammad &amp; Nishida, IEA/AIE 2016</a>,
+<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2010miningcausal" target="_blank">Mohammad &amp; Nishida, book chapter, 2010</a>).
+The figure alongside shows the MC²-style pipeline discovering gestures shared between an "operator" giving commands
+and an "actor" executing them, by finding change points and motifs in both streams and combining the results ---
+the same machinery originally built to mine human-human interaction records now underpins how I analyze negotiation
+logs and sensor time series today.</p>
+</div>
+</div>
+</div>
+
+<div class="jumbotron">
+<div class="row align-items-center">
+<div class="col-md-4 col-sm-12">
+<img class="research-figure" src="{{ site.url }}{{ site.baseurl }}/images/research/speech-ml.svg" alt="A speech waveform feeding into a neural network, illustrating speech emotion recognition and deep learning research"/>
+</div>
+<div class="col-md-8 col-sm-12">
+<h4><b>Speech, Signal Processing &amp; Deep Learning</b></h4>
+
+<p>Alongside negotiation and robotics, I have a long-running collaboration with Panikos Heracleous and colleagues
+at KDDI Research / NEC on deep learning for speech and sensor signals, mostly centered on <b>speech emotion
+recognition</b> and <b>spoken language identification</b>. This includes using deep CNNs and i-vectors for language
+and emotion features
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#heracleous2019deepcnn" target="_blank">Heracleous, Mohammad &amp; Yoneyama, HCII 2019</a>,
+<a href="{{ site.url }}{{ site.baseurl }}/publications/#heracleous2018ivectors" target="_blank">Heracleous et al., CICLing 2018</a>),
+combining language and emotion features for multilingual emotion recognition
+(<a href="https://doi.org/10.1007/978-3-030-49062-1_12" target="_blank">Heracleous, Mohammad &amp; Yoneyama, HCII 2020</a>),
+and, most recently, applying <b>GANs and Vision Transformers</b> to the same problem
+(<a href="https://doi.org/10.1007/978-3-031-17618-0_6" target="_blank">Heracleous, Fukayama, Ogata &amp; Mohammad, HCII 2022</a>).
+With Lewis Petch and Ahmed Moustafa, this generative-modeling interest extends to <b>federated learning</b>: HFL-GAN
+is a hierarchical federated GAN designed to scale to large numbers of heterogeneous clients without centralizing
+their data
+(<a href="https://doi.org/10.1007/s10489-024-05924-x" target="_blank">Petch, Moustafa, Ma &amp; Mohammad, 2025</a>).</p>
+
+<p>A second thread, from my time at KDDI Research, is <b>human activity recognition from wearable sensors</b>. I
+worked on selecting orientation-insensitive features so a classifier keeps working when a smart-watch is worn at a
+different angle
+(<a href="https://doi.org/10.1587/transinf.2018EDP7092" target="_blank">Mohammad, Matsumoto &amp; Hoashi, 2019</a>),
+on recognizing "primitive" activities from very short sensory sequences
+(<a href="https://doi.org/10.1007/s10489-018-1166-6" target="_blank">Mohammad, Matsumoto &amp; Hoashi, 2018</a>),
+and on deep feature learning and selection for activity recognition more generally
+(<a href="https://doi.org/10.1145/3167132.3167234" target="_blank">Mohammad, Matsumoto &amp; Hoashi, SAC 2018</a>),
+together with a public dataset of smart-watch accelerometer recordings from an unmodified kitchen
+(<a href="https://doi.org/10.1145/3152832.3152844" target="_blank">Mohammad, Matsumoto &amp; Hoashi, MUM 2017</a>).
+Two of my NEC patents grew directly out of this work: a method for training multiple CNN pipelines for accurate
+activity recognition, and a neural-network regulator for compressing convolutional networks using feature-selection
+techniques (see the <a href="{{ site.url }}{{ site.baseurl }}/patents/">patents</a> page).</p>
+</div>
 </div>
 </div>
