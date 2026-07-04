@@ -7,9 +7,7 @@ permalink: /
 
 ### Welcome!
 
-I am a principal researcher at the Data Science Research Laboratories, NEC, Japan  and an Associate Professor at Assiut University, Egypt.
-
-I also hold a visiting researcher positions at  the Artificial Intelligence Research Center [AIRC], AIST and the center of Advanced Intelligence Project (AIP), RIKEN.
+I am a Senior Research Scientist at the Knowledge Science Research Laboratories, NEC, Japan, and a Professor at Assiut University, Egypt.
 
 My research interests span the areas of artificial intelligence applied to automated negotiation, robotics, HRI, multiagent systems, machine learning, and time series analysis.
 
@@ -19,21 +17,4 @@ Since 2010, I taught at all levels from freshmen courses to advanced PhD level c
 
 And, I am still learning ...
 
-<div class="container">
-<div class="row">
-<center>
-<img src="{{ site.url }}{{ site.baseurl }}/images/banner.jpg" width="100%"/><br/>
-Examples of Feynman diagrams. <br/>
-Feynman R., The theory of positrons. <i>Phys. Rev.</i> (1949)
-</center>
-</div>
-</div>
-<br/>
-
-### About me
-
-I am a physicist working in the field of quantum mechanics and quantum electrodynamics.
-I received my undergraduate degree in physics from the Massachusetts Institute of Technology (MIT) in 1939 and went on to earn my PhD from Princeton University in 1942.
-After completing my doctoral studies, I worked on the Manhattan Project, where I helped develop the first atomic bombs.
-After the war, I returned to academia, holding teaching and research positions at Cornell and now the California Institute of Technology.
-
+<p style="margin-top:24px"><a href="https://info.flagcounter.com/rR23"><img src="https://s01.flagcounter.com/count/rR23/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_1/" alt="Flag Counter" border="0" style="border-radius:0"></a></p>

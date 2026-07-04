@@ -1,10 +1,155 @@
 ---
 layout: default
 ---
+{% assign m = site.data.pi | first %}
+<div id="homeid" class="col-sm-12 col-xs-12">
 
-  <div id="homeid" class="col-sm-7 col-xs-12">
-	{{ content }}
-  </div>
-  <div id="newsid" class="col-sm-5 col-xs-12" >
-	{% include sidebar.html %}
-  </div>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow rev">{{ m.info }}</div>
+        {% if m.photo %}<img class="hero-avatar rev" src="{{ site.url }}{{ site.baseurl }}/images/{{ m.photo }}" alt="{{ m.name }}"/>{% endif %}
+        <h1 class="rev">{{ m.name | remove: "Prof. " }}</h1>
+        <p class="role rev">AI for automated negotiation, multiagent systems, robotics &amp; HRI, machine learning, and time-series analysis.</p>
+        <div class="hero-links rev">
+          {% if m.email %}<a href="mailto:{{ m.email }}" aria-label="Email"><i class="fa fa-envelope"></i></a>{% endif %}
+          {% if m.scholar %}<a href="{{ m.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+          {% if m.github %}<a href="{{ m.github }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github"></i></a>{% endif %}
+          {% if m.orcid %}<a href="{{ m.orcid }}" target="_blank" rel="noopener" aria-label="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
+          {% if m.dblp %}<a href="{{ m.dblp }}" target="_blank" rel="noopener" aria-label="DBLP"><i class="ai ai-dblp"></i></a>{% endif %}
+          {% if m.researchgate %}<a href="{{ m.researchgate }}" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="ai ai-researchgate"></i></a>{% endif %}
+          {% if m.semanticscholar %}<a href="{{ m.semanticscholar }}" target="_blank" rel="noopener" aria-label="Semantic Scholar"><i class="ai ai-semantic-scholar"></i></a>{% endif %}
+          {% if m.scopus %}<a href="{{ m.scopus }}" target="_blank" rel="noopener" aria-label="Scopus"><i class="ai ai-scopus"></i></a>{% endif %}
+          {% if m.linkedin %}<a href="{{ m.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>{% endif %}
+        </div>
+        <div class="hero-cta rev">
+          <a class="btn btn-primary" href="{{ site.url }}{{ site.baseurl }}/research">Explore the research</a>
+          {% if m.cv %}<a class="btn" href="{{ site.url }}{{ site.baseurl }}/{{ m.cv }}" target="_blank" rel="noopener"><i class="fa fa-file-pdf-o"></i> CV (PDF)</a>{% endif %}
+        </div>
+      </div>
+
+      <div class="viz rev">
+        <div class="vhead">
+          <span class="t">Bilateral bargaining</span>
+          <span class="legend"><span><i style="background:#E0994F"></i>Agent&nbsp;A</span><span><i style="background:#3fd3c6"></i>Agent&nbsp;B</span></span>
+        </div>
+        <canvas id="neg" width="520" height="380" aria-label="Two negotiating agents exchanging offers that converge to a Pareto-optimal agreement"></canvas>
+        <div class="cap">Two agents exchange offers along the utility frontier, converging on a Pareto-optimal agreement.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO (from home.md) ===== -->
+  <section class="home-intro rev">
+    {{ content }}
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  {% if m.education1 %}
+  <section class="home-section rev">
+    <div class="section-eyebrow">Education</div>
+    <h2>Background</h2>
+    <ul class="edu-list">
+      {% if m.education1 %}<li>{{ m.education1 }}</li>{% endif %}
+      {% if m.education2 %}<li>{{ m.education2 }}</li>{% endif %}
+      {% if m.education3 %}<li>{{ m.education3 }}</li>{% endif %}
+      {% if m.education4 %}<li>{{ m.education4 }}</li>{% endif %}
+      {% if m.education5 %}<li>{{ m.education5 }}</li>{% endif %}
+      {% if m.education6 %}<li>{{ m.education6 }}</li>{% endif %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <!-- ===== NEWS + EVENTS ===== -->
+  <section class="home-section rev">
+    <div class="home-cols">
+      <div>
+        <div class="section-eyebrow">Recent</div>
+        <h2>News</h2>
+        <div class="timeline">
+          {% for article in site.data.news limit:4 %}
+          <div class="item"><span class="date">{{ article.date }}</span><p>{{ article.headline }}</p></div>
+          {% endfor %}
+        </div>
+        <p style="margin-top:14px"><a class="more-link" href="{{ site.url }}{{ site.baseurl }}/allnews.html">All news →</a></p>
+      </div>
+      <div>
+        <div class="section-eyebrow">Upcoming</div>
+        <h2>Events</h2>
+        <div class="timeline">
+          {% for article in site.data.events limit:4 %}
+          <div class="item"><span class="date">{{ article.date }}</span><p>{{ article.headline }}</p></div>
+          {% endfor %}
+        </div>
+        <p style="margin-top:14px"><a class="more-link" href="{{ site.url }}{{ site.baseurl }}/allevents.html">All events →</a></p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* reveal on scroll */
+  var revs = [].slice.call(document.querySelectorAll('.rev'));
+  if (reduce || !('IntersectionObserver' in window)) { revs.forEach(function(r){ r.classList.add('in'); }); }
+  else {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.12});
+    document.querySelectorAll('.hero .rev').forEach(function(r,i){ r.style.transitionDelay=(i*80)+'ms'; });
+    revs.forEach(function(r){ io.observe(r); });
+  }
+
+  /* negotiation convergence canvas */
+  var cv = document.getElementById('neg'); if(!cv) return;
+  var ctx = cv.getContext('2d');
+  var W = cv.width, H = cv.height, PAD = 46;
+  function X(u){ return PAD + u*(W-PAD*1.4); }
+  function Y(u){ return H-PAD - u*(H-PAD*1.8); }
+  function frontier(t){ var a=t; var b=Math.sqrt(1-t*t)*0.98; return {a:a,b:b}; }
+  var agreeT = 0.58; var ag = frontier(agreeT);
+  var Aoffers=[], Boffers=[]; var N=7;
+  for(var i=0;i<N;i++){ var f=i/(N-1);
+    var ta=0.94-(0.94-agreeT)*f; var fa=frontier(ta); Aoffers.push({a:fa.a-(1-f)*0.06,b:fa.b-(1-f)*0.10});
+    var tb=0.18+(agreeT-0.18)*f; var fb=frontier(tb); Boffers.push({a:fb.a-(1-f)*0.10,b:fb.b-(1-f)*0.06});
+  }
+  Aoffers[N-1]={a:ag.a,b:ag.b}; Boffers[N-1]={a:ag.a,b:ag.b};
+  function grid(){
+    ctx.clearRect(0,0,W,H);
+    ctx.strokeStyle='rgba(255,255,255,.07)'; ctx.lineWidth=1;
+    for(var g=0;g<=4;g++){ var gy=Y(g/4); ctx.beginPath(); ctx.moveTo(PAD,gy); ctx.lineTo(W-PAD*0.4,gy); ctx.stroke();
+      var gx=X(g/4); ctx.beginPath(); ctx.moveTo(gx,H-PAD); ctx.lineTo(gx,PAD*0.4); ctx.stroke(); }
+    ctx.strokeStyle='rgba(255,255,255,.28)'; ctx.beginPath(); ctx.moveTo(PAD,PAD*0.4); ctx.lineTo(PAD,H-PAD); ctx.lineTo(W-PAD*0.4,H-PAD); ctx.stroke();
+    ctx.fillStyle='#7f9a96'; ctx.font='11px ui-monospace,Menlo,monospace';
+    ctx.fillText('Agent A utility →', W-150, H-PAD+22);
+    ctx.save(); ctx.translate(PAD-16,120); ctx.rotate(-Math.PI/2); ctx.fillText('Agent B utility →',0,0); ctx.restore();
+    ctx.strokeStyle='rgba(255,255,255,.35)'; ctx.lineWidth=1.6; ctx.setLineDash([4,4]); ctx.beginPath();
+    for(var t=0;t<=1.0001;t+=0.02){ var f=frontier(t); var px=X(f.a),py=Y(f.b); if(t===0)ctx.moveTo(px,py); else ctx.lineTo(px,py); }
+    ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle='rgba(255,255,255,.5)'; ctx.fillText('Pareto frontier', X(0.62)+8, Y(0.86));
+  }
+  function dot(o,color,r){ ctx.fillStyle=color; ctx.beginPath(); ctx.arc(X(o.a),Y(o.b),r,0,7); ctx.fill(); }
+  function trail(arr,color,upto){ ctx.strokeStyle=color; ctx.lineWidth=1.4; ctx.globalAlpha=.5; ctx.beginPath();
+    for(var i=0;i<=upto&&i<arr.length;i++){ var px=X(arr[i].a),py=Y(arr[i].b); if(i===0)ctx.moveTo(px,py); else ctx.lineTo(px,py);} ctx.stroke(); ctx.globalAlpha=1; }
+  var TEAL='#3fd3c6', AMBER='#E0994F';
+  function frame(step){
+    grid();
+    var idx=Math.min(N-1,Math.floor(step));
+    trail(Aoffers,AMBER,idx); trail(Boffers,TEAL,idx);
+    for(var i=0;i<=idx;i++){ dot(Aoffers[i],AMBER,i===idx?5:3); dot(Boffers[i],TEAL,i===idx?5:3); }
+    if(idx>=N-1){
+      var t=(Date.now()%1600)/1600, r=8+Math.sin(t*6.28)*3;
+      ctx.strokeStyle='rgba(255,255,255,.9)'; ctx.lineWidth=2; ctx.beginPath(); ctx.arc(X(ag.a),Y(ag.b),r,0,7); ctx.stroke();
+      dot(ag,'#ffffff',5);
+      ctx.fillStyle='#eafffb'; ctx.font='11px ui-monospace,Menlo,monospace'; ctx.fillText('Agreement', X(ag.a)+14, Y(ag.b)-8);
+    }
+  }
+  if(reduce){ frame(N); return; }
+  var start=null;
+  function anim(ts){ if(!start)start=ts; var e=(ts-start)/1000; var step=e/0.32; frame(step);
+    if(step<N-1) requestAnimationFrame(anim); else { (function pulse(){ frame(N); requestAnimationFrame(pulse); })(); } }
+  requestAnimationFrame(anim);
+})();
+</script>
