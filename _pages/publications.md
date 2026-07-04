@@ -17,6 +17,12 @@ permalink: /publications/
 
 This is a partial publication list. Please find the complete list in my [cv](https://yasserfarouk.github.io/cv/yasser.pdf).
 
+## Selected Publications
+
+<div class="repcards">
+{% bibliography --query @*[keywords ~= important] %}
+</div>
+
 <!-- <div class="jumbotron">
 ### Preprints
 {% bibliography --query @unpublished %}

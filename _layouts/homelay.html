@@ -40,9 +40,59 @@ layout: default
     </div>
   </section>
 
-  <!-- ===== INTRO (from home.md) ===== -->
+  <!-- ===== RESEARCH THREADS ===== -->
+  <section class="home-section rev">
+    <div class="section-eyebrow">Four threads</div>
+    <div class="shead-row"><h2>Research</h2><a class="more-link" href="{{ site.url }}{{ site.baseurl }}/research">Full research statement →</a></div>
+    <div class="threads">
+      <a class="thcard focus-negotiation" href="{{ site.url }}{{ site.baseurl }}/research">
+        <svg class="motif" viewBox="0 0 100 100" fill="none"><circle cx="30" cy="50" r="12" stroke="#E0994F" stroke-width="2"/><circle cx="70" cy="50" r="12" stroke="#0E6E68" stroke-width="2"/><path d="M42 50h16" stroke="#0E6E68" stroke-width="2"/></svg>
+        <h3>Automated Negotiation</h3>
+        <p>Data-driven and RL-based negotiating agents, negotiation protocols, and the ANAC/SCML competitions that stress-test them.</p>
+        <span class="thtag">NegMAS · SCML · ANAC</span>
+      </a>
+      <a class="thcard focus-multiagent" href="{{ site.url }}{{ site.baseurl }}/research">
+        <svg class="motif" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="34" r="7" stroke="#0E6E68" stroke-width="2"/><circle cx="30" cy="66" r="7" stroke="#E0994F" stroke-width="2"/><circle cx="70" cy="66" r="7" stroke="#0E6E68" stroke-width="2"/><path d="M46 40 34 60M54 40 66 60M37 66h26" stroke="#0E6E68" stroke-width="1.6"/></svg>
+        <h3>Multiagent Systems</h3>
+        <p>Coordination and contracting in supply chains and markets, and the simulation worlds where many agents interact under scarce information.</p>
+        <span class="thtag">Supply-chain worlds &amp; markets</span>
+      </a>
+      <a class="thcard focus-robotics" href="{{ site.url }}{{ site.baseurl }}/research">
+        <svg class="motif" viewBox="0 0 100 100" fill="none"><rect x="34" y="30" width="32" height="26" rx="4" stroke="#E0994F" stroke-width="2"/><path d="M44 56v10M56 56v10M40 66h20" stroke="#0E6E68" stroke-width="2"/><circle cx="43" cy="42" r="2.4" fill="#0E6E68"/><circle cx="57" cy="42" r="2.4" fill="#0E6E68"/></svg>
+        <h3>Robotics &amp; HRI</h3>
+        <p>Embodied interaction and human–robot teaming — the roots of my PhD work on how machines read and respond to people.</p>
+        <span class="thtag">Embodied interaction</span>
+      </a>
+      <a class="thcard focus-timeseries" href="{{ site.url }}{{ site.baseurl }}/research">
+        <svg class="motif" viewBox="0 0 100 100" fill="none"><path d="M28 64c8-2 10-24 16-24s8 18 14 18 10-26 16-26" stroke="#0E6E68" stroke-width="2"/><path d="M28 72h44" stroke="#E0994F" stroke-width="1.6"/></svg>
+        <h3>ML &amp; Time-Series</h3>
+        <p>Pattern discovery and motif mining in sequential data — tools built for interaction logs, now used across negotiation and sensor streams.</p>
+        <span class="thtag">Motif discovery · mining</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== INTRO + SELECTED PUBLICATIONS (from home.md) ===== -->
   <section class="home-intro rev">
     {{ content }}
+  </section>
+
+  <!-- ===== SOFTWARE ===== -->
+  <section class="home-section rev">
+    <div class="section-eyebrow">Open source</div>
+    <div class="shead-row"><h2>Software people build on</h2><a class="more-link" href="{{ site.url }}{{ site.baseurl }}/software">All projects →</a></div>
+    <div class="tools">
+      <a class="tool" href="https://github.com/yasserfarouk/negmas" target="_blank" rel="noopener">
+        <div class="tname">NegMAS</div>
+        <p>A Python library for building and running situated automated negotiations — the backbone of the ANAC negotiation competitions.</p>
+        <div class="tmeta"><span>pip install negmas</span><span>Python</span></div>
+      </a>
+      <a class="tool" href="{{ site.url }}{{ site.baseurl }}/software" >
+        <div class="tname">SCML</div>
+        <p>The Supply Chain Management League: a simulation world where agents negotiate contracts along a production pipeline.</p>
+        <div class="tmeta"><span>ANAC-SCML track</span><span>Python</span></div>
+      </a>
+    </div>
   </section>
 
   <!-- ===== EDUCATION ===== -->

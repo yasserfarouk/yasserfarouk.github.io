@@ -16,3 +16,9 @@ I worked in academia, small startups, research companies, and research institute
 Since 2010, I taught at all levels from freshmen courses to advanced PhD level courses in computer science, informatics, applied mathematics, software engineering, mechatronics, and robotics.
 
 And, I am still learning ...
+
+## Selected Publications
+
+<div class="repcards">
+{% bibliography --query @*[keywords ~= important] %}
+</div>
