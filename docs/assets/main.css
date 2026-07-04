@@ -502,6 +502,9 @@ th {
 .jumbotron h3:first-child, .jumbotron h4:first-child {
   margin-top: 0; }
 
+.jumbotron[id] {
+  scroll-margin-top: 80px; }
+
 /* ---------- buttons / chips ---------- */
 .btn {
   display: inline-flex;

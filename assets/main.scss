@@ -167,6 +167,7 @@ th { font-family: var(--mono); font-size: .78rem; text-transform: uppercase; let
 }
 .jumbotron h1:first-child, .jumbotron h2:first-child,
 .jumbotron h3:first-child, .jumbotron h4:first-child { margin-top: 0; }
+.jumbotron[id] { scroll-margin-top: 80px; }
 
 /* ---------- buttons / chips ---------- */
 .btn {

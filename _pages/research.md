@@ -9,30 +9,12 @@ permalink: /research/
 img{
   border-radius: 10px;
 }
-.col-md-3 {
-  margin-top:10px;
-  margin-bottom:10px;
-  padding:0px;
-  display:block;
-  overflow:hidden;
-  text-align:center;
-  display: table-cell;
-  background: white;
-  border-radius: 20px;
-  height: auto;
-}
-iframe {
-  margin:0;
-  padding:0;
-  width: 175px;
-  display: inline;
-  vertical-align: middle;
-}
 .research-figure {
   width: 100%;
   border: 1px solid #dde6ee;
   background: white;
   padding: 6px;
+  border-radius: 10px;
 }
 .research-pubs {
   margin-top: 10px;
@@ -45,25 +27,26 @@ iframe {
 
 ## Research
 
-My research sits at the intersection of multiagent systems, robotics and machine learning, with automated
-negotiation as the connecting thread for the last decade. Before that, my PhD and postdoctoral work focused on
-human-robot interaction and the time-series/pattern-discovery tools needed to make sense of embodied interaction
-data --- tools that I still use today when mining negotiation logs and sensor streams. The four areas below give an
-overview, each with a handful of representative publications (the [full list]({{ site.url }}{{ site.baseurl }}/publications/) and
+My research sits at the intersection of automated negotiation, multiagent systems, robotics, and machine learning.
+Automated negotiation has been the connecting thread for the last decade; before that, my PhD and postdoctoral work
+focused on human-robot interaction and the time-series/pattern-discovery tools needed to make sense of embodied
+interaction data --- tools that I still use today when mining negotiation logs and sensor streams. The four areas
+below give an overview, each with a handful of representative publications (the
+[full list]({{ site.url }}{{ site.baseurl }}/publications/) and
 [patents]({{ site.url }}{{ site.baseurl }}/patents/) have the complete record).
 
-<div class="jumbotron">
-<div class="row align-items-center">
+<div class="jumbotron" id="negotiation">
+<div class="row align-items-start">
 <div class="col-md-4 col-sm-12">
 <img class="research-figure" src="{{ site.url }}{{ site.baseurl }}/images/research/negotiation-scml.jpeg" alt="An SCML supply-chain world: factories negotiate contracts along a production pipeline from raw material to finished product"/>
 </div>
 <div class="col-md-8 col-sm-12">
-<h4><b>Automated Negotiation &amp; Multiagent Systems</b></h4>
+<h4><b>Automated Negotiation</b></h4>
 
 <p>This is the focus of most of my work since 2018. Automated negotiation asks how autonomous agents can reach
 agreements on their own --- over contracts, resources, or schedules --- without a human in the loop for every deal.
-I work on the theory (protocols, optimal strategies, and mechanism design), the infrastructure needed to study it at
-scale, and its application to real supply chains.</p>
+I work on the theory (protocols, optimal strategies, and mechanism design) and on learning-based negotiating
+agents.</p>
 
 <p>On the theory side, I introduced the <b>TAU (Tentative Acceptance Unique Offers) protocol</b>, a negotiation
 protocol that lets agents reach efficient agreements without ever revealing --- or even needing to model --- their
@@ -80,27 +63,9 @@ preference elicitation during the negotiation itself using a Value-of-Informatio
 for information that is worth the cost of asking
 (<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2019voi" target="_blank">Mohammad &amp; Nakadai, AAMAS 2019</a>).</p>
 
-<p>Much of this research would not be reproducible without shared infrastructure, so I built and maintain
-<a href="https://negmas.readthedocs.io" target="_blank"><b>NegMAS</b></a>, an open-source platform for developing
-and evaluating negotiating agents embedded in simulations
-(<a href="https://doi.org/10.1007/978-3-030-69322-0_23" target="_blank">Mohammad et al., PRIMA 2020</a>), and the
-<b>Supply Chain Management League (SCML)</b>, an ANAC competition track and benchmark environment where agents
-negotiate contracts up and down a multi-tier manufacturing chain --- from raw silicon to printed circuit boards in
-the running example --- under real-world pressures like bankruptcy risk and delivery penalties
-(<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2020scmljournal" target="_blank">Mohammad et al., JSAI 2020</a>,
-<a href="https://doi.org/10.1007/978-3-030-33792-6_10" target="_blank">Mohammad et al., PRIMA 2019</a>). More
-recently, SCML was repackaged as a generalist Gymnasium/PettingZoo environment for RL and MARL research
-(<a href="https://doi.org/10.1007/978-3-031-77367-9_2" target="_blank">Mohammad, Nakadai &amp; Greenwald, PRIMA 2024</a>),
-and I co-organize the <a href="{{ site.url }}{{ site.baseurl }}/files/anl/anl.pdf" target="_blank">Automated
-Negotiation League (ANL)</a> and the Human-Agent Negotiation (HAN) league at ANAC, and have co-authored the annual
-ANAC challenge/results reports for several years running
-(<a href="https://doi.org/10.48550/arXiv.2604.13914" target="_blank">2025</a>,
-<a href="https://doi.org/10.5555/3709347.3744072" target="_blank">2024</a>,
-<a href="https://doi.org/10.1007/978-3-030-66412-1_23" target="_blank">2019</a>).</p>
-
 <p>Reinforcement learning is a growing part of this agenda: with Ayan Sengupta we built RL-based negotiating agents
 that adapt their strategy mid-negotiation and transfer across domains and opponents
-(<a href="https://arxiv.org/abs/2102.03588" target="_blank">Sengupta, Mohammad &amp; Nakadai, AAMAS 2021</a>,
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#sengupta2021autonomous" target="_blank">Sengupta, Mohammad &amp; Nakadai, AAMAS 2021</a>,
 <a href="https://doi.org/10.24963/ijcai.2022/67" target="_blank">Sengupta, Nakadai &amp; Mohammad, IJCAI 2022</a>),
 and I have argued for treating negotiation as a distinctive middle ground between single-agent RL and full
 general-game-play for the MARL community. This line of work is now moving toward using generative AI --- LLMs as
@@ -114,13 +79,60 @@ industrial negotiation-support products.</p>
 </div>
 </div>
 
-<div class="jumbotron">
-<div class="row align-items-center">
+<div class="jumbotron" id="multiagent">
+<div class="row align-items-start">
+<div class="col-md-4 col-sm-12">
+<svg class="research-figure" viewBox="0 0 320 220" role="img" aria-label="A network of autonomous agents negotiating contracts along a supply chain">
+<line x1="60" y1="60" x2="160" y2="45" stroke="#0E6E68" stroke-width="2"/>
+<line x1="160" y1="45" x2="260" y2="70" stroke="#0E6E68" stroke-width="2"/>
+<line x1="60" y1="60" x2="120" y2="150" stroke="#C2622C" stroke-width="2"/>
+<line x1="120" y1="150" x2="220" y2="165" stroke="#0E6E68" stroke-width="2"/>
+<line x1="220" y1="165" x2="260" y2="70" stroke="#C2622C" stroke-width="2"/>
+<line x1="160" y1="45" x2="120" y2="150" stroke="#0E6E68" stroke-width="1.4" stroke-dasharray="4 4"/>
+<line x1="160" y1="45" x2="220" y2="165" stroke="#0E6E68" stroke-width="1.4" stroke-dasharray="4 4"/>
+<circle cx="60" cy="60" r="16" fill="#fff" stroke="#0E6E68" stroke-width="3"/>
+<circle cx="160" cy="45" r="16" fill="#fff" stroke="#C2622C" stroke-width="3"/>
+<circle cx="260" cy="70" r="16" fill="#fff" stroke="#0E6E68" stroke-width="3"/>
+<circle cx="120" cy="150" r="16" fill="#fff" stroke="#0E6E68" stroke-width="3"/>
+<circle cx="220" cy="165" r="16" fill="#fff" stroke="#C2622C" stroke-width="3"/>
+</svg>
+</div>
+<div class="col-md-8 col-sm-12">
+<h4><b>Multiagent Systems</b></h4>
+
+<p>Automated negotiation only becomes useful at scale when many agents interact, so a large part of my work is the
+multiagent infrastructure and benchmarks that make that study possible. Much of this research would not be
+reproducible without shared infrastructure, so I built and maintain
+<a href="https://negmas.readthedocs.io" target="_blank"><b>NegMAS</b></a>, an open-source platform for developing
+and evaluating negotiating agents embedded in simulations
+(<a href="https://doi.org/10.1007/978-3-030-69322-0_23" target="_blank">Mohammad et al., PRIMA 2020</a>).</p>
+
+<p>On top of it I created the <b>Supply Chain Management League (SCML)</b>, an ANAC competition track and benchmark
+environment where agents negotiate contracts up and down a multi-tier manufacturing chain --- from raw silicon to
+printed circuit boards in the running example --- under real-world pressures like bankruptcy risk and delivery
+penalties
+(<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2020scmljournal" target="_blank">Mohammad et al., JSAI 2020</a>,
+<a href="https://doi.org/10.1007/978-3-030-33792-6_10" target="_blank">Mohammad et al., PRIMA 2019</a>). More
+recently, SCML was repackaged as a generalist Gymnasium/PettingZoo environment for RL and MARL research
+(<a href="https://doi.org/10.1007/978-3-031-77367-9_2" target="_blank">Mohammad, Nakadai &amp; Greenwald, PRIMA 2024</a>).</p>
+
+<p>I co-organize the <a href="{{ site.url }}{{ site.baseurl }}/files/anl/anl.pdf" target="_blank">Automated
+Negotiation League (ANL)</a> and the Human-Agent Negotiation (HAN) league at ANAC, and have co-authored the annual
+ANAC challenge/results reports for several years running
+(<a href="https://doi.org/10.48550/arXiv.2604.13914" target="_blank">2025</a>,
+<a href="https://doi.org/10.5555/3709347.3744072" target="_blank">2024</a>,
+<a href="https://doi.org/10.1007/978-3-030-66412-1_23" target="_blank">2019</a>).</p>
+</div>
+</div>
+</div>
+
+<div class="jumbotron" id="robotics">
+<div class="row align-items-start">
 <div class="col-md-4 col-sm-12">
 <img class="research-figure" src="{{ site.url }}{{ site.baseurl }}/images/research/robotics-hri.svg" alt="A human and a robot interacting, illustrating imitation and gaze-based human-robot interaction research"/>
 </div>
 <div class="col-md-8 col-sm-12">
-<h4><b>Robotics &amp; Human-Robot Interaction</b></h4>
+<h4><b>Robotics &amp; HRI</b></h4>
 
 <p>My PhD (Kyoto University, under Toyoaki Nishida) and the years after it were spent asking a simple question:
 how can a robot learn to interact naturally with people, the way people learn to interact with each other ---
@@ -161,17 +173,17 @@ robot navigation in dynamic environments shared with people
 </div>
 </div>
 
-<div class="jumbotron">
-<div class="row align-items-center">
+<div class="jumbotron" id="timeseries">
+<div class="row align-items-start">
 <div class="col-md-4 col-sm-12">
 <img class="research-figure" src="{{ site.url }}{{ site.baseurl }}/files/cpmd/discovery.png" alt="Pipeline for discovering change points and recurring motifs in multidimensional command and action streams"/>
 </div>
 <div class="col-md-8 col-sm-12">
-<h4><b>Time-Series Analysis, Change-Point &amp; Motif Discovery</b></h4>
+<h4><b>ML &amp; Time-Series</b></h4>
 
-<p>Understanding interaction data in the work above required tools that did not exist yet at the time, which led to
-a parallel research thread on unsupervised time-series analysis: finding <i>when</i> a multidimensional signal
-changes behavior (change-point discovery) and <i>which</i> sub-sequences repeat meaningfully across it (motif
+<p>Understanding the interaction data behind the robotics work required tools that did not exist yet at the time,
+which led to a parallel research thread on unsupervised time-series analysis: finding <i>when</i> a multidimensional
+signal changes behavior (change-point discovery) and <i>which</i> sub-sequences repeat meaningfully across it (motif
 discovery), without knowing in advance what to look for or how long a pattern should be.</p>
 
 <p>The starting point was <b>Robust Singular Spectrum Transform (RSST)</b>, a change-point detection method robust
@@ -183,63 +195,28 @@ On top of change-point discovery I developed a family of <b>constrained motif di
 approximately-recurring patterns whose length and number of repetitions are not known beforehand
 (<a href="https://doi.org/10.1007/s00354-009-0068-x" target="_blank">Mohammad &amp; Nishida, 2009</a>), including
 exact algorithms that are simultaneously invariant to the pattern's length, scale and mean
-(<a href="https://doi.org/10.1007/s10489-015-0684-8" target="_blank">Mohammad &amp; Nishida, 2016</a>) and a
-shift-density-estimation approach for approximately recurring motifs
-(<a href="https://doi.org/10.1007/s10489-014-0531-3" target="_blank">Mohammad &amp; Nishida, 2015</a>). With Yomna
-Rayan, this was extended to multidimensional permutation entropy as a faster distance measure for constrained motif
-discovery
-(<a href="https://doi.org/10.1007/978-3-030-14799-0_20" target="_blank">Rayan, Mohammad &amp; Ali, ACIIDS 2019</a>).</p>
-
-<p>These algorithms were packaged into two open-source Matlab toolboxes, <b>CPMD</b> (change-point and constrained
-motif discovery,
-<a href="https://doi.org/10.1007/978-3-642-31087-4_13" target="_blank">Mohammad, Ohmoto &amp; Nishida, IEA/AIE 2012</a>)
+(<a href="https://doi.org/10.1007/s10489-015-0684-8" target="_blank">Mohammad &amp; Nishida, 2016</a>). These were
+packaged into two open-source Matlab toolboxes, <b>CPMD</b>
+(<a href="https://doi.org/10.1007/978-3-642-31087-4_13" target="_blank">Mohammad, Ohmoto &amp; Nishida, IEA/AIE 2012</a>)
 and its successor <b>MC²</b>, which adds causality discovery between processes to the same pipeline
-(<a href="https://doi.org/10.1007/978-3-319-42007-3_12" target="_blank">Mohammad &amp; Nishida, IEA/AIE 2016</a>,
-<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2010miningcausal" target="_blank">Mohammad &amp; Nishida, book chapter, 2010</a>).
-The figure alongside shows the MC²-style pipeline discovering gestures shared between an "operator" giving commands
-and an "actor" executing them, by finding change points and motifs in both streams and combining the results ---
-the same machinery originally built to mine human-human interaction records now underpins how I analyze negotiation
-logs and sensor time series today.</p>
-</div>
-</div>
-</div>
+(<a href="https://doi.org/10.1007/978-3-319-42007-3_12" target="_blank">Mohammad &amp; Nishida, IEA/AIE 2016</a>).</p>
 
-<div class="jumbotron">
-<div class="row align-items-center">
-<div class="col-md-4 col-sm-12">
-<img class="research-figure" src="{{ site.url }}{{ site.baseurl }}/images/research/speech-ml.svg" alt="A speech waveform feeding into a neural network, illustrating speech emotion recognition and deep learning research"/>
-</div>
-<div class="col-md-8 col-sm-12">
-<h4><b>Speech, Signal Processing &amp; Deep Learning</b></h4>
-
-<p>Alongside negotiation and robotics, I have a long-running collaboration with Panikos Heracleous and colleagues
-at KDDI Research / NEC on deep learning for speech and sensor signals, mostly centered on <b>speech emotion
-recognition</b> and <b>spoken language identification</b>. This includes using deep CNNs and i-vectors for language
-and emotion features
-(<a href="{{ site.url }}{{ site.baseurl }}/publications/#heracleous2019deepcnn" target="_blank">Heracleous, Mohammad &amp; Yoneyama, HCII 2019</a>,
-<a href="{{ site.url }}{{ site.baseurl }}/publications/#heracleous2018ivectors" target="_blank">Heracleous et al., CICLing 2018</a>),
-combining language and emotion features for multilingual emotion recognition
-(<a href="https://doi.org/10.1007/978-3-030-49062-1_12" target="_blank">Heracleous, Mohammad &amp; Yoneyama, HCII 2020</a>),
-and, most recently, applying <b>GANs and Vision Transformers</b> to the same problem
-(<a href="https://doi.org/10.1007/978-3-031-17618-0_6" target="_blank">Heracleous, Fukayama, Ogata &amp; Mohammad, HCII 2022</a>).
-With Lewis Petch and Ahmed Moustafa, this generative-modeling interest extends to <b>federated learning</b>: HFL-GAN
-is a hierarchical federated GAN designed to scale to large numbers of heterogeneous clients without centralizing
-their data
-(<a href="https://doi.org/10.1007/s10489-024-05924-x" target="_blank">Petch, Moustafa, Ma &amp; Mohammad, 2025</a>).</p>
-
-<p>A second thread, from my time at KDDI Research, is <b>human activity recognition from wearable sensors</b>. I
-worked on selecting orientation-insensitive features so a classifier keeps working when a smart-watch is worn at a
-different angle
+<p>On the broader machine-learning side, I have a long-running collaboration with Panikos Heracleous and colleagues
+at KDDI Research / NEC on deep learning for speech and sensor signals --- mostly <b>speech emotion recognition</b>
+and <b>spoken language identification</b> using deep CNNs, i-vectors, and more recently GANs and Vision Transformers
+(<a href="https://doi.org/10.1007/978-3-030-49062-1_12" target="_blank">Heracleous, Mohammad &amp; Yoneyama, HCII 2020</a>,
+<a href="https://doi.org/10.1007/978-3-031-17618-0_6" target="_blank">Heracleous, Fukayama, Ogata &amp; Mohammad, HCII 2022</a>),
+and a hierarchical federated GAN, HFL-GAN, that scales to many heterogeneous clients without centralizing their data
+(<a href="https://doi.org/10.1007/s10489-024-05924-x" target="_blank">Petch, Moustafa, Ma &amp; Mohammad, 2025</a>).
+A second thread, from my time at KDDI Research, is <b>human activity recognition from wearable sensors</b>:
+orientation-insensitive features
 (<a href="https://doi.org/10.1587/transinf.2018EDP7092" target="_blank">Mohammad, Matsumoto &amp; Hoashi, 2019</a>),
-on recognizing "primitive" activities from very short sensory sequences
+recognizing "primitive" activities from very short sensory sequences
 (<a href="https://doi.org/10.1007/s10489-018-1166-6" target="_blank">Mohammad, Matsumoto &amp; Hoashi, 2018</a>),
-and on deep feature learning and selection for activity recognition more generally
-(<a href="https://doi.org/10.1145/3167132.3167234" target="_blank">Mohammad, Matsumoto &amp; Hoashi, SAC 2018</a>),
-together with a public dataset of smart-watch accelerometer recordings from an unmodified kitchen
+and a public dataset of smart-watch accelerometer recordings from an unmodified kitchen
 (<a href="https://doi.org/10.1145/3152832.3152844" target="_blank">Mohammad, Matsumoto &amp; Hoashi, MUM 2017</a>).
-Two of my NEC patents grew directly out of this work: a method for training multiple CNN pipelines for accurate
-activity recognition, and a neural-network regulator for compressing convolutional networks using feature-selection
-techniques (see the <a href="{{ site.url }}{{ site.baseurl }}/patents/">patents</a> page).</p>
+The same time-series machinery originally built to mine human-human interaction records now underpins how I analyze
+negotiation logs and sensor streams today.</p>
 </div>
 </div>
 </div>
