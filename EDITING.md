@@ -29,7 +29,7 @@ git add -A && git commit -m "deploying updates" && git push
    always in sync with your master bibliography.
 3. **Builds the site** (production) into `docs/`.
 
-GitHub Pages serves the `docs/` folder at <https://www.yasserm.com>. Changes go live a
+GitHub Pages serves the `docs/` folder at <https://yasserfarouk.github.io>. Changes go live a
 minute or two after you push.
 
 ---
