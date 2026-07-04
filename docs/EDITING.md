@@ -108,6 +108,19 @@ Each entry has `keywords` that decide which section it appears in:
 | `git = {…}` | **Code** (GitHub) |
 | `doi = {…}` | DOI (or arXiv for `@unpublished`) |
 | `isbn = {…}` | ISBN / book link |
+| `award = {…}` | 🏆 award **badge** on the website (e.g. `award = {IEEE ICA 2023 Best Paper}`). In the CV, awards are shown from the `note` field instead. |
+
+**Research-focus color coding & the Selected Publications strip.** Add extra
+keywords (comma-separated, alongside the section keyword) to tag a paper:
+
+- One focus area — `negotiation`, `multiagent`, `robotics`, or `timeseries` — adds a
+  small colored label and colors its card border.
+- `important` — makes the paper appear as a card in the **Selected Publications** strip
+  at the top of the Publications page and on the home page.
+
+Example: `keywords = {conference, negotiation, important}`. The Selected strip is driven
+by the query `@*[keywords ~= important]` (note the `~=` "contains" operator — needed
+because keywords is a list).
 
 Example — a conference paper with a PDF and a code repo:
 ```bibtex
