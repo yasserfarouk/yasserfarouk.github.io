@@ -78,11 +78,12 @@ pre{
 {% endif %}
 
 {% if entry.award %}
-
 {% if entry.awardfile %}
-<a href="{{ site.url }}{{ site.baseurl }}/awards/{{ entry.awardfile }}"><button class="btn btn-success btm-sm"><i class="fa fa-sun-o"></i> {{ entry.award }}</button></a>
+<a href="{{ site.url }}{{ site.baseurl }}/awards/{{ entry.awardfile }}"><button class="btn btn-success btm-sm"><i class="fa fa-trophy"></i> {{ entry.award }}</button></a>
+{% elsif entry.awardlink %}
+<a href="{{ entry.awardlink }}" target="_blank" rel="noopener"><button class="btn btn-success btm-sm"><i class="fa fa-trophy"></i> {{ entry.award }}</button></a>
 {% else %}
-<a href="{{ endry.awardlink }}"><button class="btn btn-success btm-sm"><i class="fa fa-sun-o"></i> {{ entry.award }}</button></a>
+<span class="btn btn-success btm-sm award-badge"><i class="fa fa-trophy"></i> {{ entry.award }}</span>
 {% endif %}
 {% endif %}
 
