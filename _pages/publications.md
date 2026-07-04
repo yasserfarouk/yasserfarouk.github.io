@@ -50,7 +50,7 @@ This is a partial publication list. Please find the complete list in my [cv](htt
 <div class="jumbotron">
 
 ### Journal Articles
-{% bibliography --query @article[keywords != localjournal]%}
+{% bibliography --query @article[keywords != localjournal && keywords != other]%}
 </div>
 
 <div class="jumbotron">
@@ -60,7 +60,7 @@ This is a partial publication list. Please find the complete list in my [cv](htt
 
 <div class="jumbotron">
 ### International Conferences
-{% bibliography --query @inproceedings[keywords != workshop && keywords != localconference] %}
+{% bibliography --query @inproceedings[keywords != workshop && keywords != localconference && keywords != other] %}
 </div>
 
 <div class="jumbotron">
@@ -75,4 +75,8 @@ This is a partial publication list. Please find the complete list in my [cv](htt
 <div class="jumbotron">
 ### Local Conferences
 {% bibliography --query @inproceedings[keywords = localconference] %}
+</div>
+<div class="jumbotron">
+### Others
+{% bibliography --query @*[keywords ~= other] %}
 </div>

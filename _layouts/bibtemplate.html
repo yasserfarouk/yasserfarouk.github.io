@@ -22,11 +22,12 @@ pre{
 </style>
 
 
-{% assign focus = "" %}{% assign flabel = "" %}
-{% if entry.keywords contains 'negotiation' %}{% assign focus = "negotiation" %}{% assign flabel = "Automated Negotiation" %}
-{% elsif entry.keywords contains 'multiagent' %}{% assign focus = "multiagent" %}{% assign flabel = "Multiagent Systems" %}
-{% elsif entry.keywords contains 'robotics' %}{% assign focus = "robotics" %}{% assign flabel = "Robotics & HRI" %}
-{% elsif entry.keywords contains 'timeseries' %}{% assign focus = "timeseries" %}{% assign flabel = "ML & Time-Series" %}
+{% assign focus = entry.focus %}{% assign flabel = "" %}
+{% if focus == 'negotiation' %}{% assign flabel = "Automated Negotiation" %}
+{% elsif focus == 'multiagent' %}{% assign flabel = "Multiagent Systems" %}
+{% elsif focus == 'robotics' %}{% assign flabel = "Robotics & HRI" %}
+{% elsif focus == 'timeseries' %}{% assign flabel = "ML & Time-Series" %}
+{% else %}{% assign focus = "" %}
 {% endif %}
 <div class="pubentry{% if focus != '' %} focus-{{ focus }}{% endif %}">
 {% if focus != '' %}<span class="focus-tag focus-{{ focus }}">{{ flabel }}</span>{% endif %}
