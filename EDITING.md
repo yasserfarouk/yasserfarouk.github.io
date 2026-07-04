@@ -18,9 +18,16 @@ Then open <http://localhost:4000>. The page reloads as you edit. Press `Ctrl+C` 
 ## 2. Publish (make it live)
 
 ```bash
-./deploy.sh                 # builds the site into docs/
+./deploy.sh                 # see below
 git add -A && git commit -m "deploying updates" && git push
 ```
+
+`./deploy.sh` does three things automatically:
+1. **Recompiles your CV** in `~/code/personal/cv` and copies the fresh `yasser.pdf` here.
+2. **Pulls the latest `publications.bib`** from `~/code/personal/cv` into `assets/ref.bib`
+   (dropping the legacy `extra` entries) — so publications/patents/tutorials/talks are
+   always in sync with your master bibliography.
+3. **Builds the site** (production) into `docs/`.
 
 GitHub Pages serves the `docs/` folder at <https://www.yasserm.com>. Changes go live a
 minute or two after you push.
@@ -75,9 +82,10 @@ change `name`, `photo`, `info`, links, etc. Put the photo file in `images/`.
 
 These pages are generated from **one BibTeX file: `assets/ref.bib`**.
 
-> **Important:** we maintain the master bibliography at
-> `../../personal/cv/publications.bib` and copy it here. Edit the master, then copy it
-> over `assets/ref.bib` (the copy excludes the `keywords = {extra}` legacy entries).
+> **Important:** the master bibliography lives at `~/code/personal/cv/publications.bib`.
+> **Edit it there**, then just run `./deploy.sh` — it copies the latest version into
+> `assets/ref.bib` for you (excluding the `keywords = {extra}` legacy entries). Don't edit
+> `assets/ref.bib` directly; it is overwritten on every deploy.
 
 Each entry has `keywords` that decide which section it appears in:
 

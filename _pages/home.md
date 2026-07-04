@@ -16,5 +16,3 @@ I worked in academia, small startups, research companies, and research institute
 Since 2010, I taught at all levels from freshmen courses to advanced PhD level courses in computer science, informatics, applied mathematics, software engineering, mechatronics, and robotics.
 
 And, I am still learning ...
-
-<p style="margin-top:24px"><a href="https://info.flagcounter.com/rR23"><img src="https://s01.flagcounter.com/count/rR23/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_1/" alt="Flag Counter" border="0" style="border-radius:0"></a></p>
