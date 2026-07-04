@@ -88,11 +88,11 @@ pre{
 {% endif %}
 
 {% if entry.type == 'booklet' or entry.type == 'unpublished' or entry.type == 'article' or  entry.type == 'thesis' or entry.type == 'patent' or entry.type == 'book' or entry.type == 'inproceedings' or entry.type == 'incollection' or entry.type == 'report' %}
-<button class="btn btn-danger btm-sm"  onclick="toggleBibtex{{entry.key}}()"><i class="fa fa-book"></i></button>
+<button class="btn btn-danger btm-sm"  onclick="toggleBibtex{{entry.key}}()"><i class="fa fa-book"></i> BibTeX</button>
 {% endif %}
 
 {% if entry.abstract %}
-<button class="btn btn-warning btm-sm"  onclick="toggleAbstract{{entry.key}}()"><i class="fa fa-file-text-o"></i></button>
+<button class="btn btn-warning btm-sm"  onclick="toggleAbstract{{entry.key}}()"><i class="fa fa-file-text-o"></i> Abstract</button>
 {% endif %}
 
 {% if entry.abstract %}
