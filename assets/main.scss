@@ -196,6 +196,8 @@ th { font-family: var(--mono); font-size: .78rem; text-transform: uppercase; let
 .focus-multiagent  { --fc: #C2622C; }  /* Multiagent Systems */
 .focus-robotics    { --fc: #3E6B99; }  /* Robotics & HRI */
 .focus-timeseries  { --fc: #8A5A7A; }  /* ML & Time-Series */
+.focus-digitaltwin { --fc: #2C6B4A; } /* Digital Twins */
+.focus-dataspace   { --fc: #5B4E8C; } /* Data Spaces */
 
 /* subtle focus indicator shown on any tagged publication */
 .focus-tag {

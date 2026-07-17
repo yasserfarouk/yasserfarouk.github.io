@@ -592,6 +592,14 @@ th {
   --fc: #8A5A7A; }
 
 /* ML & Time-Series */
+.focus-digitaltwin {
+  --fc: #2C6B4A; }
+
+/* Digital Twins */
+.focus-dataspace {
+  --fc: #5B4E8C; }
+
+/* Data Spaces */
 /* subtle focus indicator shown on any tagged publication */
 .focus-tag {
   display: inline-block;

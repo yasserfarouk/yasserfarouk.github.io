@@ -22,15 +22,27 @@ pre{
 </style>
 
 
-{% assign focus = entry.focus %}{% assign flabel = "" %}
-{% if focus == 'negotiation' %}{% assign flabel = "Automated Negotiation" %}
-{% elsif focus == 'multiagent' %}{% assign flabel = "Multiagent Systems" %}
-{% elsif focus == 'robotics' %}{% assign flabel = "Robotics & HRI" %}
-{% elsif focus == 'timeseries' %}{% assign flabel = "ML & Time-Series" %}
-{% else %}{% assign focus = "" %}
-{% endif %}
-<div class="pubentry{% if focus != '' %} focus-{{ focus }}{% endif %}">
-{% if focus != '' %}<span class="focus-tag focus-{{ focus }}">{{ flabel }}</span>{% endif %}
+{% assign foci = entry.focus | split: "," %}
+{% assign first_focus = "" %}
+{% for f in foci %}
+  {% assign fc = f | strip %}
+  {% if fc == 'negotiation' or fc == 'multiagent' or fc == 'robotics' or fc == 'timeseries' or fc == 'digitaltwin' or fc == 'dataspace' %}
+    {% if first_focus == "" %}{% assign first_focus = fc %}{% endif %}
+  {% endif %}
+{% endfor %}
+<div class="pubentry{% if first_focus != '' %} focus-{{ first_focus }}{% endif %}">
+{% for f in foci %}
+  {% assign fc = f | strip %}
+  {% assign flabel = "" %}
+  {% if fc == 'negotiation' %}{% assign flabel = "Automated Negotiation" %}
+  {% elsif fc == 'multiagent' %}{% assign flabel = "Multiagent Systems" %}
+  {% elsif fc == 'robotics' %}{% assign flabel = "Robotics & HRI" %}
+  {% elsif fc == 'timeseries' %}{% assign flabel = "ML & Time-Series" %}
+  {% elsif fc == 'digitaltwin' %}{% assign flabel = "Digital Twins" %}
+  {% elsif fc == 'dataspace' %}{% assign flabel = "Data Spaces" %}
+  {% endif %}
+  {% if flabel != '' %}<span class="focus-tag focus-{{ fc }}">{{ flabel }}</span>{% endif %}
+{% endfor %}
 <div class="text-justify">{{reference}}</div>
 
 <!-- You can use the below to make your name bold -->
