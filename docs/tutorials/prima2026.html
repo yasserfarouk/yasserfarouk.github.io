@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PRIMA 2026: Generative AI for Automated Negotiation - Yasser Mohammad</title>
+  <meta name="description" content="Academic webpage of Y. Mohammad">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yasserfarouk.github.io/tutorials/prima2026.html">
+  <link rel="shortcut icon" type ="image/x-icon" href="https://yasserfarouk.github.io/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css">
+
+  <link rel="preconnect" href="https://player.vimeo.com">
+  <link rel="preconnect" href="https://i.vimeocdn.com">
+  <link rel="preconnect" href="https://f.vimeocdn.com">
+
+
+
+<!-- Google Analytics (original) -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script>
+<!-- End Google Tag Manager -->
+
+
+<style>
+</style>
+</head>
+
+	<body>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id="
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="site-nav">
+  <div class="nav-wrap">
+    <a class="nav-brand" href="https://yasserfarouk.github.io/">
+      <span class="dot"></span>Yasser Mohammad
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-cb">
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation"><span></span></label>
+    <div class="nav-links">
+      <a href="https://yasserfarouk.github.io/">Home</a>
+      
+      <a href="https://yasserfarouk.github.io/about">About</a>
+      
+      <a href="https://yasserfarouk.github.io/patents">Patents</a>
+      
+      <a href="https://yasserfarouk.github.io/publications">Publications</a>
+      
+      <a href="https://yasserfarouk.github.io/research">Research</a>
+      
+      <a href="https://yasserfarouk.github.io/industry">Industry</a>
+      
+      <a href="https://yasserfarouk.github.io/tutorials">Tutorials</a>
+      
+      <a href="https://yasserfarouk.github.io/talks">Talks</a>
+      
+      <a href="https://yasserfarouk.github.io/software">Software</a>
+      
+      <a href="https://yasserfarouk.github.io/teaching">Teaching</a>
+      
+      <a href="https://yasserfarouk.github.io/blog">Blog</a>
+      
+    </div>
+  </div>
+</nav>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">PRIMA 2026: Generative AI for Automated Negotiation</h1>
+  </header>
+
+  <div class="post-content">
+    <ul>
+  <li><strong>Venue</strong>: 27th International Conference on Principles and Practice of Multi-Agent Systems (PRIMA 2026), Nagoya, Japan.</li>
+  <li><strong>Presenter</strong>: <a href="https://yasserfarouk.github.io" target="_blank">Yasser Mohammad</a>, <a href="https://www.nec.com" target="_blank">NEC Corporation</a> / <a href="https://www.aist.go.jp/index_en.html" target="_blank">AIST</a> / Assiut University.</li>
+  <li><strong>Duration</strong>: Half-day (approx. 210 min of content plus a 30 min break).</li>
+  <li><strong>Level</strong>: Beginner / introductory.</li>
+  <li><strong>Contact</strong>: <a href="mailto:y.mohammad@nec.com" target="_blank">y.mohammad@nec.com</a>.</li>
+  <li><strong>Materials</strong>: Annotated slides, runnable notebooks, and pointers to datasets and models will be released on a public GitHub repository and linked from this page before the conference, as in past tutorials. The hands-on component builds on the open-source <a href="https://github.com/yasserfarouk/negmas" target="_blank">NegMAS</a> platform and the <code class="language-plaintext highlighter-rouge">negmas-llm</code> library.</li>
+</ul>
+
+<h4 id="brief-description">Brief Description</h4>
+
+<p>Automated negotiation — building agents that reach agreements on behalf of self-interested parties — is a long-standing multi-agent-systems problem gaining renewed urgency as autonomous AI agents act across institutional boundaries. Capable generative models have reshaped the field almost overnight: frontier LLMs now bargain in natural language, sometimes at human level, yet they are exploitable, behaviorally biased, and hard to evaluate. This half-day, beginner-friendly tutorial gives PRIMA attendees a principled entry point. We establish the foundations of automated negotiation (protocols, the Nash bargaining problem, the BOA agent architecture, and why “deal rate is not enough”), introduce a four-mode design space for combining generation and strategy, and survey the 2024–2026 landscape — from bilateral bargaining to multi-party round-tables, commons dilemmas, Diplomacy, persuasion, and coaching. A hands-on session with the open-source NegMAS platform and the <code class="language-plaintext highlighter-rouge">negmas-llm</code> library implements all four modes and evaluates them on a multi-metric quality bundle. We close with the open problems — robustness, theory-of-mind, and fairness — that define the frontier, inviting the MAS community to help shape it.</p>
+
+<p>Automated negotiation dates back to the 1950s and the Nash bargaining game (with earlier attempts in the 1930’s), and is becoming markedly more important as the wide adoption of AI in business creates a need to coordinate self-interested AI agents across institutional boundaries — a “cooperation-within-competition” setting central to the PRIMA community. Generative AI, and large language models (LLMs) in particular, has transformed the field in two years: models can now negotiate in natural language, sometimes at human level, yet they are exploitable, behaviorally biased, and hard to evaluate. This tutorial gives a principled, hands-on entry point. It presents the needed background (protocols, the Nash bargaining problem and fairness solutions, the BOA — bidding–opponent-modeling–acceptance — architecture, and modern multi-metric evaluation), introduces a four-mode design space for combining generation and strategy, and surveys the 2024–2026 landscape. Every concept is illustrated live in the open-source NegMAS platform, culminating in a demonstration (with optional follow-along) that builds and evaluates generative negotiators, and closes with the open problems that define the frontier.</p>
+
+<hr />
+
+<h2 id="target-audience-and-prerequisites">Target Audience and Prerequisites</h2>
+
+<p>The target audience is postgraduate students and researchers in multi-agent systems, game theory, simulation, and applications of MAS. The tutorial serves two subgroups: <em>generative-AI and ML researchers</em> seeking a challenging problem domain (for whom we introduce automated negotiation and its tools), and <em>MAS and automated-negotiation researchers</em> who want to use and critically evaluate generative models (for whom we introduce LLM-based agents and how they fit — and fail to fit — classical negotiation theory). This is a beginner-level tutorial that introduces the concepts it needs; prerequisites are minimal. Familiarity with negotiation basics or with deploying LLMs as agents is a plus but not required. Basic Python helps those following the hands-on segment, but the demonstration is self-contained and can be watched passively.</p>
+
+<hr />
+
+<h2 id="learning-outcomes">Learning Outcomes</h2>
+
+<p>By the end of the tutorial, attendees will be able to:</p>
+
+<ul>
+  <li>explain the automated-negotiation problem, its protocols, the BOA agent architecture, and the Nash-bargaining and fairness solutions;</li>
+  <li>evaluate negotiation quality with a multi-metric bundle (utility, Pareto/Nash optimality, fairness, exploitability, theory-of-mind, faithfulness) rather than agreement rate alone;</li>
+  <li>place any generative negotiator within the four-mode design space and summarize the state of the art and current failure modes;</li>
+  <li>build and evaluate generative negotiators in NegMAS and <code class="language-plaintext highlighter-rouge">negmas-llm</code>, and identify open problems to pursue.</li>
+</ul>
+
+<hr />
+
+<h2 id="why-should-you-attend-relevance-to-prima-and-the-mas-community">Why Should You Attend? Relevance to PRIMA and the MAS Community</h2>
+
+<p>The tutorial joins two of the MAS community’s most active directions. Automated negotiation maps to non-zero-sum games with incomplete information — a middle ground between single-environment and general-game-play settings. Whether LLM agents can <em>negotiate</em> — reach fair, efficient, robust agreements with other self-interested agents — is precisely a multi-agent-systems question, not a language-modeling one, and this is where PRIMA is uniquely positioned to contribute. The tutorial deliberately foregrounds the genuinely multi-agent frontier that sets it apart from a generic NLP-venue LLM tutorial: adversarial multi-party round-tables, commons dilemmas, the cultural evolution of cooperation, game-theoretic evaluation, and self-evolving agents for Diplomacy. Designed as a <em>true tutorial</em> rather than a survey, it grounds every concept in runnable code, and is timely: the presenter’s own work on generative AI for negotiation, the 2024–2026 wave of benchmarks and agents, and the rise of agent-to-agent commerce make this a moment when the MAS community can help shape a rapidly forming field.</p>
+
+<hr />
+
+<h2 id="detailed-outline">Detailed Outline</h2>
+
+<p><em>Preferred length: half-day (approx. 210 min of content plus a 30 min break); NegMAS is used for hands-on illustration throughout. Per-topic minutes are given in parentheses.</em></p>
+
+<ul>
+  <li><strong>Part 1 — Foundations of Automated Negotiation (50).</strong>
+    <ul>
+      <li><em>The negotiation problem</em> (15): protocols (the Alternating Offers Protocol and its multilateral extension SAOP), negotiation vs. auctions, reading a negotiation plot in NegMAS.</li>
+      <li><em>Classic results</em> (10): the Nash bargaining problem, Rubinstein’s protocol, optimal offering, and the Nash, Kalai, and Kalai–Smorodinsky fairness solutions.</li>
+      <li><em>Anatomy of an agent</em> (10): the BOA (bidding–opponent-modeling–acceptance) framework and where generation enters.</li>
+      <li><em>Deal rate is not enough</em> (15): why any single metric is gameable, and the multi-metric quality bundle (utility, Pareto/Nash optimality, fairness, exploitability, theory-of-mind, faithfulness).</li>
+    </ul>
+  </li>
+  <li><strong>Part 2 — Generative AI as a Negotiator: a Design Space (30).</strong>
+    <ul>
+      <li><em>LLMs as agents</em> (10): prompting, personas, tool use, memory, reflection, opponent modeling.</li>
+      <li><em>Four ways to combine generation and strategy</em> (20), the spine of the tutorial: (1) <em>pure LLM negotiation</em> end-to-end with no strategic component; (2) <em>LLM as an input/output device</em> translating between language and structured offers for a strategy; (3) <em>LLM as a strategic negotiator</em> making bidding/acceptance decisions itself; and (4) <em>a strategic negotiator as a tool for an LLM</em>, exposed as a callable tool (e.g. via MCP). We contrast their fluency, controllability, optimality, and exploitability.</li>
+    </ul>
+  </li>
+  <li><strong>Break (30).</strong></li>
+  <li><strong>Part 3 — The Landscape of Generative AI for Negotiation (55).</strong> A tour of recent advances.
+    <ul>
+      <li><em>Can LLMs negotiate?</em> (15): competence and manipulability, and the buyer/seller role asymmetry.</li>
+      <li><em>Multi-agent and strategic reasoning</em> (15): game-theoretic evaluation, adversarial round-table negotiation, commons survival, repeated games, and the cultural evolution of cooperation.</li>
+      <li><em>Diplomacy as a grand challenge</em> (10): CICERO and self-evolving agents.</li>
+      <li><em>Persuasion, coaching, and human–AI negotiation</em> (15): super-human persuasion, coaching, tool-integrated agents, fairness-driven strategies, human–AI tradeoffs, the theory-of-mind gap, and deployment.</li>
+    </ul>
+  </li>
+  <li><strong>Part 4 — Hands-on: Building Generative Negotiators with <code class="language-plaintext highlighter-rouge">negmas-llm</code> (45).</strong> A live demonstration (optional follow-along) on the open-source <code class="language-plaintext highlighter-rouge">negmas-llm</code> library, implementing the four modes of Part 2 on one supply-chain scenario as working code.
+    <ul>
+      <li><em>Pure LLM and LLM-as-I/O</em> (15): an end-to-end LLM negotiator (mode 1), then the LLM used only to translate language to/from structured offers for a classical strategy (mode 2).</li>
+      <li><em>LLM as strategist and negotiator-as-tool</em> (15): the LLM making bidding/acceptance decisions (mode 3), then delegating strategy to a classical negotiator exposed as a tool via MCP (mode 4).</li>
+      <li><em>Evaluation and exploitability</em> (15): scoring all four on the multi-metric bundle and probing robustness with persona-based attacks.</li>
+    </ul>
+  </li>
+  <li><strong>Part 5 — Open Problems and Research Directions (30).</strong>
+    <ul>
+      <li><em>The frontier</em> (15): robustness/exploitability, the theory-of-mind gap, fairness-vs-agreement tradeoffs, and faithfulness/honesty.</li>
+      <li><em>Where the MAS community comes in</em> (10): agent-to-agent commerce and concurrent negotiation, real-world applications such as procurement, hybrid generative + game-theoretic scaffolding, protocol design, and benchmarks and competitions such as ANAC and SCML.</li>
+      <li><em>Wrap-up</em> (5): summary and an invitation to get involved.</li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <section id="footer" class="site-footer">
+  <div class="container-footer">
+    <div>
+      <h5>About</h5>
+      <p>Yasser Mohammad<br/> Senior Research Scientist<br/> NEC Corporation<br/> Professor of Intelligent Systems<br/> Assiut University, Egypt<br/>
+</p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <p><a href="mailto:yasserfarouk@gmail.com" target="_blank"><i class="fa fa-envelope fa-1x"></i> Contact Yasser via email</a> <br/>
+</p>
+    </div>
+    <div>
+      <h5>Coordinates</h5>
+      <p>Knowledge Science Research Laboratories<br/> NEC Corporation<br/> Tokyo, Japan
+</p>
+    </div>
+    <p class="copy">&copy; 2026 Yasser Mohammad</p>
+  </div>
+</section>
+
+
+  </body>
+
+</html>
