@@ -131,30 +131,16 @@ layout: default
   </section>
   {% endif %}
 
-  <!-- ===== NEWS + EVENTS ===== -->
+  <!-- ===== NEWS ===== -->
   <section class="home-section rev">
-    <div class="home-cols">
-      <div>
-        <div class="section-eyebrow">Recent</div>
-        <h2>News</h2>
-        <div class="timeline">
-          {% for article in site.data.news limit:4 %}
-          <div class="item"><span class="date">{{ article.date }}</span><p>{{ article.headline }}</p></div>
-          {% endfor %}
-        </div>
-        <p style="margin-top:14px"><a class="more-link" href="{{ site.url }}{{ site.baseurl }}/allnews.html">All news →</a></p>
-      </div>
-      <div>
-        <div class="section-eyebrow">Upcoming</div>
-        <h2>Events</h2>
-        <div class="timeline">
-          {% for article in site.data.events limit:4 %}
-          <div class="item"><span class="date">{{ article.date }}</span><p>{{ article.headline }}</p></div>
-          {% endfor %}
-        </div>
-        <p style="margin-top:14px"><a class="more-link" href="{{ site.url }}{{ site.baseurl }}/allevents.html">All events →</a></p>
-      </div>
+    <div class="section-eyebrow">Recent</div>
+    <h2>News</h2>
+    <div class="timeline">
+      {% for article in site.data.news limit:4 %}
+      <div class="item"><span class="date">{{ article.date }}</span><p>{{ article.headline }}</p>{% if article.content %}<p class="news-content">{{ article.content | markdownify }}</p>{% endif %}</div>
+      {% endfor %}
     </div>
+    <p style="margin-top:14px"><a class="more-link" href="{{ site.url }}{{ site.baseurl }}/allnews.html">All news →</a></p>
   </section>
 
 </div>
