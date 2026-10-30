@@ -424,6 +424,10 @@ th {
   color: var(--ink);
   text-decoration: none; }
 
+.nav-links a.active {
+  color: var(--ink);
+  font-weight: 600; }
+
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -435,6 +439,9 @@ th {
   transition: right .25s ease; }
 
 .nav-links a:hover::after {
+  right: 0; }
+
+.nav-links a.active::after {
   right: 0; }
 
 .nav-toggle-cb, .nav-burger {

@@ -128,11 +128,13 @@ th { font-family: var(--mono); font-size: .78rem; text-transform: uppercase; let
   color: var(--ink-2); font-size: .9rem; font-weight: 500; position: relative;
 }
 .nav-links a:hover { color: var(--ink); text-decoration: none; }
+.nav-links a.active { color: var(--ink); font-weight: 600; }
 .nav-links a::after {
   content: ""; position: absolute; left: 0; right: 100%; bottom: -5px;
   height: 2px; background: var(--teal); transition: right .25s ease;
 }
 .nav-links a:hover::after { right: 0; }
+.nav-links a.active::after { right: 0; }
 .nav-toggle-cb, .nav-burger { display: none; }
 
 @media (max-width: 760px) {

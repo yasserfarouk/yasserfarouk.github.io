@@ -11,9 +11,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <input type="checkbox" id="nav-toggle" class="nav-toggle-cb">
     <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation"><span></span></label>
     <div class="nav-links">
-      <a href="{{ site.url }}{{ site.baseurl }}/">Home</a>
-      {% for page in site.nav_pages %}
-      <a href="{{ site.url }}{{ site.baseurl }}/{{ page.name }}">{{ page.name | capitalize }}</a>
+      <a {% if page.url == '/' %}class="active" aria-current="page"{% endif %} href="{{ site.url }}{{ site.baseurl }}/">Home</a>
+      {% for page_item in site.nav_pages %}
+      {% assign nav_target = page_item.name | prepend: '/' %}
+      <a {% if page.url != '/' and page.url contains nav_target %}class="active" aria-current="page"{% endif %} href="{{ site.url }}{{ site.baseurl }}/{{ page_item.name }}">{{ page_item.name | capitalize }}</a>
       {% endfor %}
     </div>
   </div>
