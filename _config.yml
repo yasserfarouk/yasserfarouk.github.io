@@ -30,6 +30,7 @@ nav_pages:
   - name: talks
   - name: software
   - name: teaching
+  - name: media
   - name: blog
 include:
   - .htaccess

@@ -73,7 +73,7 @@ negotiators and as tools for negotiation analytics
 (<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2025generativeai" target="_blank">Mohammad, Chen, Higa, Ando &amp; Morinaga, 2025</a>)
 --- and toward using time-series forecasting to make procurement negotiation proactive rather than reactive
 (<a href="{{ site.url }}{{ site.baseurl }}/publications/#mohammad2026forecasting" target="_blank">Mohammad &amp; Chen, AAMAS 2026</a>).
-Most of this work (10 patents and counting) is done jointly with NEC Corporation, where it feeds directly into
+Most of this work (11 patents and counting) is done jointly with NEC Corporation, where it feeds directly into
 industrial negotiation-support products.</p>
 </div>
 </div>
