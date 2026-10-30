@@ -46,7 +46,11 @@ fi
 # 3. Build the site -------------------------------------------------------
 echo "==> Building site (production) into docs/ ..."
 cd "$SITE"
-JEKYLL_ENV=production bundle exec jekyll build -d docs
+# The jekyll 3.9.3 gems are installed for system Ruby 2.6; the default
+# `ruby`/`bundle` on PATH is Homebrew Ruby 4.x, whose bundler is incompatible
+# with these gems. Invoke jekyll directly with system Ruby 2.6 to avoid that.
+JEKYLL_ENV=production /usr/bin/ruby "$GEM_HOME/bin/jekyll" build -d docs
+touch docs/.nojekyll
 
 echo ""
 echo "Done. Review docs/, then publish with:"
