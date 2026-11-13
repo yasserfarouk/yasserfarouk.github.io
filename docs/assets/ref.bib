@@ -2732,6 +2732,55 @@
 % Workshop Papers
 % ------------------------------------------------------------
 
+@inproceedings{mohammad2026pablove,
+	abstract = {An LLM negotiation agent leaves behind a rich behavioral trace
+	            (what it read, what it offered, what it conceded,
+	            what it said and why). Saying what the agent did,
+	            precisely enough to compare two agents or to locate
+	            where a behavior comes from is problematic because
+	            there is no agreed upon vocabulary for decomposing
+	            the agent and different studies use different
+	            evaluation criteria further complicating comparison.
+	            In this paper, we extend the BOA (Bidding, Opponent
+	            Modeling, Acceptance) agent decomposition with
+	            Perception and Language, plus two optional
+	            components, Validation and Ending (PABLO-ve). Several
+	            published LLM negotiation methods, and all 24
+	            independently authored agents of the ANAC 2026
+	            human-agent league, decompose into these seven
+	            components. This decomposition has two main benefits:
+	            it allows us to compare methods in a common
+	            vocabulary and it allows us to create new methods by
+	            recombining components from existing ones. We also
+	            define 15 behavioral criteria distilled from the
+	            negotiation-evaluation literature (concession
+	            dynamics, exploitability, information leakage,
+	            strategic coupling and instruction-following
+	            alongside deal rate), and run 14 methods,
+	            re-expressed as PABLO-ve configurations, over ten
+	            scenarios and two backend models (3640 negotiations).
+	            Configurations in which a non-LLM component generates
+	            the offers and those in which the LLM generates them
+	            fall into non-overlapping bands on advantage, win
+	            rate and Pareto optimality, on both models. An
+	            attribution stated in this vocabulary can then be
+	            tested by removing the component it names: a powered
+	            ablation that disables the Validation component's
+	            admissibility check multiplies the rate at which an
+	            agent violates its own stated commitments by 4.81,
+	            allowing us to localize and interpret the violation.},
+	keywords = {workshop},
+	focus = {negotiation,machinelearning},
+	author = {Yasser Mohammad},
+	title = {{PABLO-ve}: A Component Vocabulary for Interpreting the Behavior
+	         of {LLM} Negotiation Agents},
+	booktitle = {The 1st Workshop on Interpreting Agent Behavior (IAB@NeurIPS
+	             2026)},
+	address = {Sydney, Australia},
+	year = {2026},
+	url = {https://openreview.net/pdf?id=jEvqqz99Dl},
+}
+
 @inproceedings{mohammad2026rlnegotiation,
 	abstract = {This tutorial introduces attendees to the problem of building
 	            effective negotiation strategies using RL and MARL methods. After
