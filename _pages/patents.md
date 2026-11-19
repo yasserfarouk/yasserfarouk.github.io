@@ -14,7 +14,7 @@ permalink: /patents/
     margin-bottom:30px;
 }
 </style>
-My patent work is mostly filed jointly with NEC Corporation and covers automated negotiation protocols and strategies, data-marketplace matching, neural architecture selection, preference elicitation, and neural network compression. Percentages in parentheses indicate my share of inventorship where noted.
+My patent work is mostly filed jointly with NEC Corporation and covers automated negotiation protocols and strategies, LLM-based negotiation, training general negotiating agents, negotiation visualization, data-marketplace matching, neural architecture selection, preference elicitation, and (from my time at KDDI Research) activity recognition and neural network compression. Percentages in parentheses indicate my share of inventorship where noted.
 
 <div class="jumbotron">
 ### Patents
