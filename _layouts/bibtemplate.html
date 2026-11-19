@@ -43,7 +43,22 @@ pre{
   {% endif %}
   {% if flabel != '' %}<span class="focus-tag focus-{{ fc }}">{{ flabel }}</span>{% endif %}
 {% endfor %}
-<div class="text-justify">{{reference}}</div>
+<div class="text-justify">{% if entry.type == 'patent' and entry.url %}{{ reference | remove: entry.url }}{% else %}{{reference}}{% endif %}</div>
+
+{% if entry.type == 'patent' and entry.filings %}
+<div class="patent-meta">
+  {% if entry.patentstatus %}<span class="patent-status st-{{ entry.patentstatus }}">{{ entry.patentstatus }}</span>{% endif %}
+  {% assign filings = entry.filings | split: ";" %}
+  {% for fl in filings %}
+    {% assign f = fl | strip | split: "|" %}
+    {% assign fst = f[2] | strip %}
+    {% if fst == 'abandoned' or fst == 'expired' %}{% unless site.show_abandoned_patents %}{% continue %}{% endunless %}{% endif %}
+    {% assign furl = f[3] | strip %}{% assign foff = f[0] | strip %}{% assign fnum = f[1] | strip %}{% if fnum contains foff %}{% assign flabel = fnum %}{% else %}{% assign flabel = foff | append: ' ' | append: fnum %}{% endif %}
+    {% if furl != '' and furl != 'unpublished' %}<a class="filing st-{{ fst }}" href="{{ furl }}" target="_blank" rel="noopener">{{ flabel }}<span class="fs">{{ fst }}</span></a>
+    {% else %}<span class="filing st-{{ fst }}">{{ flabel }}<span class="fs">{{ fst }}{% if furl == 'unpublished' %}, unpublished{% endif %}</span></span>{% endif %}
+  {% endfor %}
+</div>
+{% endif %}
 
 <!-- You can use the below to make your name bold -->
 <!-- {{reference | replace_first: 'Bryngelson, S. H.', '<b>Bryngelson, S. H.</b>' | replace_first: 'Bryngelson, S.', '<b>Bryngelson, S.</b>' }}</div> -->
@@ -62,7 +77,7 @@ pre{
 <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn btn-info btm-sm"><i class="fa fa-file-pdf-o"></i></button></a>
 {% endif %}
 
-{% if entry.url %}
+{% if entry.url and entry.type != 'patent' %}
 {% if entry.url contains '.pdf' %}
 <a href="{{ entry.url }}" target="_blank"><button class="btn btn-info btm-sm"><i class="fa fa-file-pdf-o"></i> PDF</button></a>
 {% else %}

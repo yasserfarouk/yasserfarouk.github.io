@@ -352,3 +352,25 @@ figcaption, .figcaption { text-align: right; color: var(--ink-2); font-size: .85
   .rev { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
 }
+
+/* ---- Patents: status badges, filing chips, abandoned section ---------------- */
+.patent-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 4px 0 8px; }
+.patent-status, .filing {
+  display: inline-block; font-family: var(--mono); font-size: .66rem; letter-spacing: .05em;
+  padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); text-decoration: none;
+  color: var(--ink-2); background: #fff; white-space: nowrap;
+}
+.patent-status { text-transform: uppercase; font-weight: 700; }
+.st-granted   { --sc: #1a7f4b; }
+.st-allowed   { --sc: #2c69ff; }
+.st-pending   { --sc: #0f1ed2; }
+.st-abandoned, .st-expired { --sc: #8a8f9c; }
+.patent-status, .filing { color: var(--sc, var(--ink-2)); border-color: color-mix(in srgb, var(--sc, #999) 40%, #fff);
+  background: color-mix(in srgb, var(--sc, #999) 7%, #fff); }
+a.filing:hover { background: color-mix(in srgb, var(--sc, #999) 16%, #fff); text-decoration: none; }
+.filing .fs { opacity: .75; margin-left: 4px; }
+.filing.st-abandoned, .filing.st-expired { text-decoration: line-through; text-decoration-color: #b8bcc6; }
+.patents-abandoned { font-size: .86em; color: #8a8f9c; }
+.patents-abandoned .pubentry, .patents-abandoned .pubentry i { color: #8a8f9c; }
+.patents-abandoned .pubentry { opacity: .8; }
+.patents-abandoned h3 { color: #8a8f9c; }
